@@ -1,0 +1,71 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="08 9, 2003 4:11:47 PM">
+<meta name="topic-status" content="In Progress">
+<meta name="topic-priority" content="0">
+<meta name="topic-time-estimate" content="0">
+<meta name="topic-comment" content="">
+<meta name="topic-id" content="17.2.3 Touch Animation Scripts">
+<meta name="window-type" content="$global_NewWindow">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>Scripts de zone tactile</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h2>18.2.1 Scripts d'appui</h2>
+<p>Les scripts de zone d'appui peuvent &ecirc;tre ex&eacute;cut&eacute;s lors de l'appui sur la touche de fonction, le commutateur ou le dessin &agrave; animation sur appui associ&eacute;.</p>
+<p class="NoteImage"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Certains dessins et objets ne prennent pas en charge l'animation sur appui. Pour obtenir la liste des objets prenant en charge cette animation, reportez-vous &agrave; la section 8.1.2 <a href="Animation.chm::/Animation_types.htm">Animations prises en charge par des objets</a>.</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">Si un script de zone d'appui utilise des boucles <span style="font-weight: bold;">while</span> ou <span style="font-weight: bold;">for</span>, et ne se termine pas en cinq secondes, le script sera termin&eacute; pour que les op&eacute;rations d'&eacute;cran sur appui puissent continuer.</p>
+</li>
+</ul>
+<p class="NoteText">&nbsp;</p>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Ajout de scripts &agrave; des commutateurs</h4>
+<p>Vous pouvez cr&eacute;er un script et l'ex&eacute;cuter lors de l'appui sur un commutateur. Ceci n&eacute;cessite de cr&eacute;er un commutateur avec une op&eacute;ration de script. Pour plus d'informations sur la cr&eacute;ation de commutateurs, reportez-vous &agrave; la section 9.2, <a href="Switches.chm::/SW_Settings.htm">Cr&eacute;ation de commutateurs</a>.</p>
+<p>&nbsp;</p>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Ajout de scripts d'animation sur appui</h4>
+<p>Vous pouvez cr&eacute;er un script et l'ex&eacute;cuter lors de l'appui sur un objet graphique. Ceci n&eacute;cessite d'ajouter une animation sur appui &agrave; un objet graphique et d'y configurer une op&eacute;ration de script pour l'ex&eacute;cuter lors de l'appui sur cet objet. Pour plus d'informations sur l'ajout d'animation sur appui et la configuration d'op&eacute;rations d'animation sur appui pour les objets graphiques, reportez-vous &agrave; la section 9.2.7.1, <a href="Switches.chm::/Touch_animation_function_is_attached_to_object.htm">Ajouter une animation sur appui &agrave; un objet</a>.</p>
+<p>&nbsp;</p>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Ajout de scripts aux touches de fonction</h4>
+<p>Vous pouvez cr&eacute;er un script et l'ex&eacute;cuter lors de l'appui sur une touche de fonction. Il suffit d'ajouter une touche de fonction &agrave; votre projet et de cr&eacute;er une op&eacute;ration de script pour cette touche de fonction. Pour plus d'informations sur l'ajout d'une touche de fonction &agrave; votre projet, reportez-vous &agrave; la section 24.5.4, <a href="HardwareOptions.chm::/Adding_Function_Keys.htm">Ajout et suppression des touches de fonction</a>. Pour plus d'informations sur les op&eacute;rations de cha&icirc;ne, reportez-vous &agrave; la section 9.5, <a href="Switches.chm::/Operations.htm">Op&eacute;rations</a>.</p>
+<p>&nbsp;</p>
+</body>
+</html>

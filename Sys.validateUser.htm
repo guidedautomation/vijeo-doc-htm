@@ -1,0 +1,98 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>Sys.validateUser.</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h4>Sys.validateUser.</h4>
+
+<p style="font-weight: bold;">Fonction</p>
+<p>V&eacute;rifie le nom d'utilisateur et le mot de passe de l'op&eacute;rateur qui autorise une action ou une op&eacute;ration prot&eacute;g&eacute;e n&eacute;cessitant approbation avant de pouvoir l'ex&eacute;cuter.</p>
+<p>Les noms d'utilisateur, les mots de passe et les niveaux de s&eacute;curit&eacute; sont configur&eacute;s dans le n&oelig;ud S&eacute;curit&eacute;. Pour plus d'informations sur la configuration de la s&eacute;curit&eacute; dans votre projet, reportez-vous &agrave; la section 4.8, <a href="StandardOperation.chm::/security_overview.htm">Configuration de la s&eacute;curit&eacute; pour les cibles et les projets</a>.</p>
+<p style="font-weight: bold;">Format</p>
+<p class="Code" style="margin-left: 40px;">void Sys.validateUser(String UserName, String UserPassword, <span style="font-style: italic;">IntegerVariable</span> SecurityLevel);</p>
+<p class="NoteText">&nbsp;</p>
+<p style="font-weight: bold;">Param&egrave;tres</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; left: 0px; top: 213px; margin-left: 40px;" cellspacing="0" width="63.817%">
+<col style="width: 22.112%;">
+<col style="width: 77.888%;">
+<tr style="height: 21px;">
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.112%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Param&egrave;tre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 77.888%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="height: 34px;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.112%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">UserName</p>
+</td>
+<td rowspan="2" style="border-bottom: Solid 1px #000000; width: 77.888%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p>Le nom d'utilisateur et le mot de passe de l'op&eacute;ration qui autorise l'action ou l'op&eacute;ration.</p>
+</td>
+</tr>
+<tr style="height: 34px;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.112%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">UserPassword</p>
+</td>
+</tr>
+<tr style="height: 34px;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; width: 22.112%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">SecurityLevel</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 77.888%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p>La variable enti&egrave;re de Vijeo Designer qui stocke le niveau de s&eacute;curit&eacute; de l'op&eacute;rateur.</p>
+<p>Lors de l'ex&eacute;cution, les valeurs &eacute;crites dans la variable seront les suivantes :</p>
+<ul>
+<li class="p-Bullet">
+<p class="Bullet"><span style="font-weight: bold;">-1</span> : Indique que la validation a &eacute;chou&eacute; (par exemple, un mot de passe incorrect).</p>
+</li>
+<li class="p-Bullet">
+<p class="Bullet"><span style="font-weight: bold;">Sup&eacute;rieur &agrave; 0</span> : Indique le niveau de s&eacute;curit&eacute; de l'utilisateur lorsque la validation r&eacute;ussie.</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<p style="font-weight: bold;">Voir &eacute;galement</p>
+
+<p><a href="Sys.Login.htm">Sys.login</a>, <a href="Sys.logout.htm">Sys.Logout</a></p>
+
+</body>
+</html>

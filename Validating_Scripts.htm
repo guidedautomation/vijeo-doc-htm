@@ -1,0 +1,75 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="08 9, 2003 11:53:53 AM">
+<meta name="topic-status" content="In Progress">
+<meta name="topic-priority" content="0">
+<meta name="topic-time-estimate" content="0">
+<meta name="topic-comment" content="">
+<meta name="topic-id" content="17.4 Checking for Errors">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>Recherche des erreurs</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h1>18.4 Recherche des erreurs</h1>
+<p>Il est recommand&eacute; de v&eacute;rifier que votre script est exempt d'erreurs au fur et &agrave; mesure que vous l'&eacute;crivez. Le d&eacute;bogage se complique si vous attendez la fin de la r&eacute;daction de vos scripts, notamment si ces derniers font appel &agrave; une logique complexe.</p>
+<p>Pour v&eacute;rifier que votre script est exempt d'erreurs, cliquez avec le bouton droit de la souris dans l'Editeur de scripts, puis s&eacute;lectionnez Valider.</p>
+<p>La fen&ecirc;tre Compte-rendu affiche les r&eacute;sultats de la validation.</p>
+<p class="Image"><img src="validate_script_feedback.bmp" alt="" style="border: none;" width="470" height="200" border="0"></p>
+<p>Cliquez deux fois sur le message d'erreur dans la fen&ecirc;tre Compte-rendu. Le script s'ouvre et la fl&egrave;che du pointeur se transforme en point d'insertion dans la ligne du script &agrave; l'origine de l'erreur. Dans la majorit&eacute; des cas, le point d'insertion appara&icirc;t sous la ligne du script &agrave; l'origine de l'erreur.</p>
+<p><img src="Note_Moji.bmp" alt="" style="border: none;" width="51" height="25" border="0"></p>
+<ul>
+	<li class="p-NoteText"><p class="NoteText">L'éditeur peut uniquement trouver les problèmes liés à la syntaxe. Les probl&egrave;mes li&eacute;s &agrave; la logique de programmation peuvent produire des erreurs " NullPointerException " ou d'autres erreurs d'ex&eacute;cution Java, mais n'afficheront pas les erreurs dans la zone de r&eacute;troaction.</p></li>
+</ul>
+<p>&nbsp;</p>
+<h4><img src="Square.bmp" alt="" style="border: none;" width="12" height="10" border="0">Erreurs les plus courantes dans les scripts</h4>
+<ul>
+	<li class="p-Bullet"><p class="Bullet"><span style="font-weight: bold;">Erreur de syntaxe</span> : indique un probl&egrave;me de formatage de votre script.<br> Une erreur de syntaxe peut se produire lorsque l'un des &eacute;l&eacute;ments suivants est manquant :</p></li>
+</ul>
+<p class="Image" style="margin-left: 40px;"><img src="SyntaxErrors.bmp" alt="" style="border: none;" width="384" height="98" border="0"></p>
+<ul>
+	<li class="p-Bullet"><p class="Bullet"><span style="font-weight: bold;">Variable locale non d&eacute;clar&eacute;e :</span> vous essayez peut-&ecirc;tre d'utiliser une variable Vijeo-Designer ou un autre objet directement dans le script. Faites appel aux m&eacute;thodes pour interagir avec les objets Vijeo-Designer.</p></li>
+	<li class="p-Bullet"><p class="Bullet"><span style="font-weight: bold;">Le type Void est utilis&eacute; uniquement comme type de retour de fonction.l'une des expressions a abouti &agrave; une valeur Void et ne peut pas faire l'objet d'un traitement, ce qui peut indiquer que vous avez ajout&eacute; un param&egrave;tre &agrave; une m&eacute;thode qui n'en accepte pas.</p></li>
+	<li class="p-Bullet"><p class="Bullet"><span style="font-weight: bold;">La conversion au type &quot;&quot; &agrave; partir du type &quot;&quot; peut entra&icirc;ner la perte de donn&eacute;es.une valeur est affect&eacute;e &agrave; une variable dont les types de donn&eacute;es ne correspondent pas. Dans certains cas, cette op&eacute;ration est acceptable ; elle peut toutefois entra&icirc;ner une perte de donn&eacute;es dans ce cas pr&eacute;cis. Pour poursuivre cette op&eacute;ration d'affectation, typez la valeur.</p></li>
+</ul>
+<p style="margin-left: 40px;">Exemple :</p>
+<p class="Code" style="margin-left: 80px;">int a = 0;</p> <p class="Code" style="margin-left: 80px;">double b = 0.0;</p>
+<p class="Code" style="margin-left: 80px;">a = b; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #008000;">// &Eacute;chec lors de la validation</span></p>
+<p class="Code" style="margin-left: 80px;">a = (int)b; <span style="color: #008000;">// Typage pour permettre la r&eacute;ussite</p>
+</body>
+</html>

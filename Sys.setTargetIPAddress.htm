@@ -1,0 +1,121 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>setTargetIPAddress</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+ <h4>Sys.setTargetIPAddress</h4>
+<p style="font-weight: bold;">Fonction</p>
+<p>Disponible sur les machines cibles &eacute;quip&eacute;es de deux r&eacute;seaux LAN qui prennent en charge Ethernet. Permet de modifier l'adresse IP cible, le masque de sous-r&eacute;seau et la passerelle par d&eacute;faut de la machine cible lors de l'ex&eacute;cution.</p>
+<p><img src="Limit.bmp" alt="" style="border: none;" border="0"></p>
+<ul>
+	<li class="p-NoteText"><p class="NoteText">Les machines cibles Windows (comme iPC et HMIG5U) ne prennent pas en charge le changement d'adresse IP &agrave; l'ex&eacute;cution et ne peuvent pas ex&eacute;cuter le script Sys.setTargetIPAddress.</p></li>
+</ul>
+<p style="font-weight: bold;">Format</p>
+<p class="code" style="margin-left: 40px;">boolean Sys.setTargetIPAddress (String IP, String subnet, String gateway, Constant);</p>
+<p style="margin-top: 6pt; font-weight: bold;">Param&egrave;tres</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; 
+		 margin-left: 40px;" cellspacing="0" width="600">
+	<col width="150">
+	<col style="width: 90%;">
+	<tr>
+		<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; 
+			 padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" 
+			 width="150" bgcolor="#91AFD9"><p class="Tabletitle">Param&egrave;tre</p></td>
+		<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; 
+			 width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9"><p 
+			 class="Tabletitle">Description</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" width="150" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">String IP</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext" style="margin-bottom: 0;">La nouvelle adresse IP de la cible. La valeur est une cha&icirc;ne en format d&eacute;cimal &agrave; quatre octets encadr&eacute;e par des guillemets doubles.</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" width="150" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">String subnet</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="note">Le nouveau masque de sous-r&eacute;seau. La valeur est une cha&icirc;ne en format d&eacute;cimal &agrave; quatre octets encadr&eacute;e par des guillemets doubles.</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" width="150" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">String gateway</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext" style="margin-bottom: 0;">La nouvelle passerelle par d&eacute;faut. La valeur est une cha&icirc;ne en format d&eacute;cimal &agrave; quatre octets encadr&eacute;e par des guillemets doubles.</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; 
+			 vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" width="150" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">Constante</p></td>
+		<td style="border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Sp&eacute;cifie Ethernet 1 ou Ethernet 2. Les entr&eacute;es valides sont&nbsp;:</p>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">En blanc = Ethernet 1</p></li>
+			<li class="p-Bullet"><p class="Bullet">ETHERNET_1 = Ethernet 1</p></li>
+			<li class="p-Bullet"><p class="Bullet">ETHERNET_2 = Ethernet 2</p></li>
+		</ul></td>
+	</tr>
+</table>
+<p style="margin-top: 6pt;">Exemples (Ethernet 1)&nbsp;:</p>
+<p style="margin-left: 40px; font-weight: normal;"><span style="font-weight: normal;">Les exemples suivants changent l'adresse IP cible d'origine &agrave; 10.187.230.100 et la d&eacute;finissent sur Ethernet 1. Le masque de sous-r&eacute;seau et la passerelle par d&eacute;faut, sans nouvelle valeur de cha&icirc;ne entre guillemets, restent inchang&eacute;s. </span></p>
+<p class="Code" style="margin-left: 40px; 
+												 margin-bottom: 12pt;">Sys.setTargetIPAddress(&quot;10.187.230.100&quot;, &quot;&quot;, &quot;&quot;);</p> <p class="Code" style="margin-left: 40px; 
+												 margin-bottom: 12pt;">Sys.setTargetIPAddress(&quot;10.187.230.100&quot;, &quot;&quot;, &quot;&quot;, ETHERNET_1);</p>
+<p style="margin-top: 6pt;">Exemple (Ethernet 2)&nbsp;:</p>
+<p style="margin-left: 40px; font-weight: normal;"><span style="font-weight: normal;">L'exemple suivant change l'adresse IP cible d'origine &agrave; 10.187.230.100 et la d&eacute;finit sur Ethernet 2. Le masque de sous-r&eacute;seau et la passerelle par d&eacute;faut, sans nouvelle valeur de cha&icirc;ne entre guillemets, restent inchang&eacute;s. </span></p>
+<p class="Code" style="margin-left: 40px; 
+												 margin-bottom: 12pt;">Sys.setTargetIPAddress(&quot;10.187.230.100&quot;, &quot;&quot;, &quot;&quot;, ETHERNET_2);</p>
+<p style="font-weight: bold;">Valeur retourn&eacute;e</p>
+<p>Retourne TRUE lorsque l'adresse IP cible est configur&eacute;e correctement. La valeur est d&eacute;finie sur la variable _IPAddressStatus.</p>
+<p>Retourne FALSE lorsque l'adresse IP cible n'est pas configur&eacute;e (par exemple, lorsque le protocole DHCP est d&eacute;fini sur Activ&eacute; ou qu'il n'existe aucune connexion r&eacute;seau).</p>
+</body>
+</html>

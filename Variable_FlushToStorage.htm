@@ -1,0 +1,86 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="08 9, 2003 3:17:11 PM">
+<meta name="topic-status" content="In Progress">
+<meta name="topic-priority" content="0">
+<meta name="topic-time-estimate" content="0">
+<meta name="topic-comment" content="">
+<meta name="topic-id" content="Variable_FlushToStorage.htm">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>flushToStorage</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h4>flushToStorage</h4>
+
+<p style="font-weight: bold;">Fonction</p>
+<p>Lorsqu'une variable est associ&eacute;e &agrave; un groupe de journalisation de donn&eacute;es, vous pouvez utiliser flushToStorage pour d&eacute;placer les donn&eacute;es de la variable &agrave; partir du buffer vers un support de stockage permanent.</p>
+<p>La taille du buffer est configurable. Vous pouvez configurer la taille du buffer dans la propri&eacute;t&eacute; Nbre de registres dans la RAM dans l'inspecteur de propri&eacute;t&eacute;s du groupe de journalisation. Lorsqu'il est satur&eacute;, les enregistrements des variables sont d&eacute;plac&eacute;s vers un support de stockage afin que de nouveaux enregistrements puissent &ecirc;tre ajout&eacute;s au buffer.</p>
+<p>Vous souhaiterez peut-&ecirc;tre ex&eacute;cuter flushToStorage :</p>
+<ul>
+<li class="p-bullet">
+<p class="bullet">&agrave; des intervalles r&eacute;guliers (script d'application P&eacute;riodique) ;</p>
+</li>
+<li class="p-bullet">
+<p class="bullet">&agrave; chaque modification d'&eacute;cran (script d'&eacute;cran A la fermeture) ;</p>
+</li>
+<li class="p-bullet">
+<p class="bullet">lorsque vous effectuez la maintenance</p>
+</li>
+<li class="p-bullet">
+<p class="bullet">lorsque vous modifiez un emplacement de stockage (carte CF/SD ou lecteur USB)</p>
+</li>
+</ul>
+<p class="NoteImage"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Cette m&eacute;thode transfert les donn&eacute;es d'une variable unique vers le stockage. Cette m&eacute;thode ne transfert pas le buffer au complet contenant toutes les donn&eacute;es historiques de toutes les variables vers le stockage.</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">Lorsque vous d&eacute;pendez d'un vidage automatique des donn&eacute;es du buffer vers le support de stockage, sachez que toutes les donn&eacute;es ne sont pas forc&eacute;ment supprim&eacute;es du buffer. Utilisez flushToStorage pour assurer le d&eacute;placement de toutes les donn&eacute;es du buffer vers le support de stockage.</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">Les donn&eacute;es figurant dans la SRAM ne peuvent &ecirc;tre vid&eacute;es qu'une seule fois. Si vous utilisez la fonction Copier sur USB et choisissez de supprimer les fichiers de la source apr&egrave;s la copie, aucun nouveau fichier n'est cr&eacute;&eacute; sauf s'il existe de nouvelles donn&eacute;es dans la SRAM.</p>
+</li>
+</ul>
+<p style="font-weight: bold;">Format</p>
+<p class="code" style="margin-left: 40px; margin-bottom: 12pt;">boolean VariableName.flushToStorage();</p>
+<p style="font-weight: bold;">Valeur retourn&eacute;e</p>
+<p>Retourne la valeur true lorsque les donn&eacute;es historiques dans le buffer sont d&eacute;plac&eacute;es avec succ&egrave;s dans le fichier &eacute;lectronique dans le lecteur secondaire ou optionnel.</p>
+<p>Renvoie la valeur false lorsque la variable ne stocke pas son historique. En d'autres mots, la variable n'est pas associ&eacute;e au groupe de journalisation de donn&eacute;es.</p>
+</body>
+</html>
