@@ -1,0 +1,139 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="08 6, 2003 4:21:02 PM">
+<meta name="topic-status" content="In Progress">
+<meta name="topic-priority" content="0">
+<meta name="topic-time-estimate" content="0">
+<meta name="topic-comment" content="">
+<meta name="topic-id" content="KEYWORD_break.htm">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>break</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+<style type="text/css">
+/*<![CDATA[*/
+body {
+        border-left-style: Solid;
+        border-left-width: 1px;
+        border-right-style: Solid;
+        border-right-width: 1px;
+        border-top-style: Solid;
+        border-top-width: 1px;
+        border-bottom-style: Solid;
+        border-bottom-width: 1px;
+        border-left-color: #000000;
+        border-right-color: #000000;
+        border-top-color: #000000;
+        border-bottom-color: #000000;
+}
+/*]]>*/
+</style>
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h4>break</h4>
+
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px;" cellspacing="0" width="400">
+<tr>
+<td style="border: Solid 1px #000000;vertical-align: TOP; width: 100%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="Code">{</p>
+<p class="Code" style="margin-left: 40px;">[instruction1];</p>
+
+<p class="Code" style="margin-left: 40px;"><span style="font-weight: bold;">break</span>;</p>
+
+<p class="Code" style="margin-left: 40px;">[instruction2];</p>
+<p class="Code">}</p>
+</td>
+</tr>
+</table>
+<p>Les crochets [ ] indiquent des &eacute;l&eacute;ments optionnels. Les mots cl&eacute;s sont <span style="font-weight: bold;">en gras</span>.</p>
+<p><span style="font-weight: bold;">break</span> permet de quitter le bloc d'instructions courant, qu'il s'agisse d'un bloc d'instructions case ou d'une boucle (for, while, do-while). Dans le script ci-dessus, break provoque un saut hors du bloc. L'instruction2 n'est donc pas ex&eacute;cut&eacute;e.</p>
+<p style="font-weight: bold;">Exemple</p>
+<p>Dans l'exemple ci-dessous, switch &eacute;value l'expression &quot;choice&quot; et passe &agrave; l'instruction case correspondante. Lorsque le mot cl&eacute; break est rencontr&eacute;, les instructions case ne sont pas ex&eacute;cut&eacute;es.</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px;" cellspacing="0" width="400">
+<tr>
+<td style="border: Solid 1px #000000;vertical-align: TOP; width: 100%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="Code">int choice = 1;</p>
+
+<p class="Code">String msg;</p>
+
+<p class="Code">&nbsp;</p>
+
+<p class="Code">switch (choice)</p>
+
+<p class="Code">{</p>
+
+<p class="Code" style="margin-left: 40px;">case 1 :</p>
+
+<p class="Code" style="margin-left: 40px;">variable1.write(0);</p>
+
+<p class="Code" style="margin-left: 40px;">break;</p>
+
+<p class="Code" style="margin-left: 40px;">case 2 :</p>
+
+<p class="Code" style="margin-left: 40px;">variable1.write(1);</p>
+
+<p class="Code" style="margin-left: 40px;">break;</p>
+
+<p class="Code">}</p>
+</td>
+</tr>
+</table>
+<p>Dans l'exemple suivant, index est incr&eacute;ment&eacute; de 2 &agrave; la fin de chaque boucle. L'expression conditionnelle <span style="font-weight: bold;">index!=9</span> ne peut jamais &ecirc;tre fausse. S'il n'y avait pas de compteur, les instructions for aboutiraient &agrave; une boucle sans fin. Le compteur est incr&eacute;ment&eacute; &agrave; chaque boucle et une fois que sa valeur est sup&eacute;rieure &agrave; 10, le mot cl&eacute; break est rencontr&eacute; et la boucle for est interrompue.</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px;" cellspacing="0" width="400">
+<tr>
+<td style="border: Solid 1px #000000;vertical-align: TOP; width: 100%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="code" style="margin-bottom: 0;">for (int index=0, counter=0; index!=9; index=index+2)</p>
+
+<p class="code" style="margin-bottom: 0;">{</p>
+
+<p class="code" style="margin-bottom: 0; margin-left: 40px;">msg = &quot;L'index actuel est &quot; + index;</p>
+
+<p class="code" style="margin-bottom: 0; margin-left: 40px;">counter++;</p>
+
+<p class="code" style="margin-bottom: 0; margin-left: 40px;">if (counter &gt; 10)</p>
+
+<p class="code" style="margin-bottom: 0; margin-left: 80px;">break;</p>
+
+<p class="code" style="margin-bottom: 0; margin-left: 0px;">}</p>
+</td>
+</tr>
+</table>
+<p style="font-weight: bold;">Voir &eacute;galement</p>
+
+<p style="margin-bottom: 0;"><a href="KEYWORD_dowhile.htm">do-while</a>, <a href="KEYWORD_for.htm">for</a>, <a href="KEYWORD_if-else.htm">if-else</a>, <a href="KEYWORD_return.htm">return</a>, <a href="KEYWORD_switch.htm">switch-case-default</a>, <a href="KEYWORD_while.htm">while</a></p>
+
+</body>
+</html>

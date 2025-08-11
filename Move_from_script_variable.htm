@@ -1,0 +1,116 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="topic-status" content="In Progress">
+<meta name="topic-priority" content="0">
+<meta name="topic-time-estimate" content="0">
+<meta name="topic-comment" content="">
+<meta name="topic-id" content="17.3.2.3 Writing Values to Pro-Designer Variables">
+<meta name="window-type" content="$global_NewWindow">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>Ecriture de valeurs dans des variables</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h3>18.3.2.3 Ecriture de valeurs dans des variables</h3>
+<p>Vous pouvez utiliser des scripts pour modifier la valeur des variables Vijeo-Designer à l'aide de la méthode d'écriture.</p>
+<p class="Image"><img src="Vijeo_Var_ScriptVar_Method_write.bmp" style="border: none;" alt="" width="453" height="139" border="0"></p>
+<ol style="list-style: decimal;">
+<li class="p">
+<p>Déclarez une variable de script et initialisez sa valeur.</p>
+</li>
+</ol>
+
+<p class="Code" style="margin-left: 40px;">int x=0;</p>
+
+<ol start="2" style="list-style: decimal;">
+<li class="p">
+<p>Affectez la valeur d'une variable Vijeo-Designer à la variable de script, puis utilisez-la dans les opérations de script. Dans cet exemple, nous divisions <span style="font-weight: bold;">x</span> par 2.<br>
+Pour plus d'informations sur les opérateurs, reportez-vous à la section 18.3.5, <a href="Operators.htm">Opérateurs</a>.</p>
+</li>
+</ol>
+
+<p class="Code" style="margin-left: 40px;">int x=0;</p>
+
+<p class="Code" style="margin-left: 40px;">x = LigneA_Sortie.getIntValue();</p>
+
+<p class="Code" style="margin-left: 40px;">x /= 2;</p>
+
+<ol start="3" style="list-style: decimal;">
+<li class="p">
+<p>Insérez la variable Vijeo-Designer et ajoutez la méthode write<br>
+Le paramètre d'une méthode write peut être une constante ou une variable de script.<br>
+Pour plus d'informations sur la méthode d'écriture de variables, reportez-vous à la section 18.9.1.6, <a href="Variable_Methods.htm">Méthodes de variable</a>.<br>
+N'oubliez pas d'utiliser un point virgule pour marquer la fin de l'instruction.</p>
+</li>
+</ol>
+
+<p class="Code" style="margin-left: 40px;">int x=0;</p>
+
+<p class="Code" style="margin-left: 40px;">x = LigneA_Sortie.getIntValue();</p>
+
+<p class="Code" style="margin-left: 40px;">x /= 2;</p>
+
+<p class="Code" style="margin-left: 40px;">Average.write( x );</p>
+
+<p class="NoteImage" style="margin-left: 0px; margin-top: 6pt;"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Lorsque vous écrivez des valeurs dans une variable du type BOOL, vous pouvez utiliser un booléen ou un entier comme paramètre dans la méthode write.</p>
+</li>
+</ul>
+<p class="Code" style="margin-left: 40px;"><img src="Check_small.bmp" style="border: none;" alt="" width="17" height="14" border="0"> BOOL01.write(false);<span style="color: #008000;">// Utiliser vrai ou faux</span></p>
+<p class="Code" style="margin-left: 40px;"><img src="Check_small.bmp" style="border: none;" alt="" width="17" height="14" border="0"> BOOL01.write(0); &#160;&#160;<span style="color: #008000;">&#160;// Utiliser 1 ou 0</span></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Lorsque vous écrivez dans une variable de type chaîne, utilisez une chaîne ou une variable de type chaîne locale (entre guillemets " ") comme paramètre de la méthode write.</p>
+</li>
+</ul>
+<p class="NoteText" style="margin-left: 40px;">Exemple :<br>
+Ecriture vers une variable Vijeo-Designer de type chaîne nommée Chaîne01</p>
+<p class="NoteText" style="margin-left: 40px;">Dans cet exemple, créez une variable de script locale et affectez la chaîne "Une erreur s'est produite".</p>
+<p class="Code" style="margin-left: 40px;">String erreur = "Une erreur s'est produite.";</p>
+<p class="Code" style="margin-left: 40px;"><img src="Check_small.bmp" style="border: none;" alt="" width="17" height="14" border="0"> Chaîne01.write(error); &#160;<span style="color: #008000;">// écrire une variable de chaîne locale</span></p>
+<p class="Code" style="margin-left: 40px;"><img src="Check_small.bmp" style="border: none;" alt="" width="17" height="14" border="0"> Chaîne01.write("ERROR");<span style="color: #008000;">// écrire une constante de chaîne</span></p>
+<p class="Code" style="margin-left: 40px;"><img src="Check_small.bmp" style="border: none;" alt="" width="17" height="14" border="0"> Chaîne.write("ERROR" + error); <span style="color: #008000;">// écrire à la fois la constante de chaîne et la variable de chaîne locale</span></p>
+<p class="Code" style="margin-left: 40px;"><img src="X_small.bmp" style="border: none;" alt="" width="19" height="14" border="0"> Chaîne01.write(une erreur s'est produite); <span style="color: #008000;">// échec de l'opération</span> <span style="color: #ff0000; font-weight: bold;">d'écriture</span><span style="color: #008000;">.</span> <span style="color: #008000;">Le paramètre write n'est pas une constante chaîne ni une variable de type chaîne locale.</span></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Lors de l'écriture des valeurs aux adresses de périphériques sur les équipements, il y a un délai entre l'exécution de la commande et quand la modification se produit effectivement sur l'équipement. Pour assurer des valeurs uniformes, nous vous recommandons d'utiliser un drapeau ou un autre mécanisme pour vous assurer que l'opération d'écriture de données se termine avant d'utiliser la variable.</p>
+</li>
+</ul>
+</body>
+</html>

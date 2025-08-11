@@ -1,0 +1,121 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>setProperty</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+ <h4>setProperty</h4>
+<p style="font-weight: bold;"><span><span><span><span><span style="font-weight: bold;">Fonction</span></span></span></span></span></p>
+<p>Permet d'&eacute;crire le param&egrave;tre de propri&eacute;t&eacute; sp&eacute;cifi&eacute; dans la SRAM de l'&eacute;quipement. Le nouveau param&egrave;tre entre en vigueur d&egrave;s que vous red&eacute;marrez l'&eacute;quipement ou utilisez la m&eacute;thode commitConfig.</p>
+<p class="NoteImage"><img src="Note_Moji.bmp" alt="" style="border: none;" width="51" height="25" border="0"></p>
+<ul>
+	<li class="p-NoteText"><p class="NoteText">Cette m&eacute;thode de script ne permet pas de valider les valeurs de param&egrave;tres &eacute;crites vers l'&eacute;quipement. Nous vous recommandons d'utiliser la m&eacute;thode getProperty() pour s'assurer que les valeurs correctes sont &eacute;crites.</p></li>
+</ul>
+<p style="font-weight: bold;">Format</p>
+<p class="code" style="margin-left: 40px;">boolean EquipmentName.setProperty(String param, int[] value);</p>
+<p style="font-weight: bold; margin-top: 6pt;">Param&egrave;tre</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; 
+		 margin-left: 40px;" cellspacing="0" width="887">
+	<col width="102">
+	<col style="width: 75.535%;">
+	<tr style="height: 47px;">
+		<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; 
+			 padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" 
+			 width="102" bgcolor="#91AFD9"><p class="Tabletitle"><span  		 style="font-weight: bold;">Param&egrave;tre</span></p></td>
+		<th style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; 
+			 width: 75.535%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9"><p 
+			 class="Tabletitle">Description</p></th>
+	</tr>
+	<tr style="height: 187px;">
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" width="102" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions"><span>String param</span></p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 75.535%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Ce param&egrave;tre permet d'identifier la partie de l'&eacute;quipement que vous configurez.</p>
+		<p>Ce param&egrave;tre doit &ecirc;tre d&eacute;fini &agrave; l'aide de l'une des cha&icirc;nes suivantes :</p>
+		<ul>
+			<li class="p-Bullet"><p 
+				 class="Bullet">&quot;Con_IPAddress&quot;</p></li> <li class="p-Bullet"><p 
+				 class="Bullet">&quot;Con_SlaveEquipmentAddress&quot;</p></li> <li class="p-Bullet"><p 
+				 class="Bullet">&quot;Con_UnitNumber&quot;</p></li> <li class="p-Bullet"><p 
+				 class="Bullet">&quot;Con_DualRedundantIPAddress&quot;</p></li> <li class="p-Bullet"><p 
+				 class="Bullet">&quot;Con_EquipmentAddress&quot;</p></li>
+		</ul>
+		<p><span>Utilisez </span> &quot;Con_IPAddress&quot; <span>pour d&eacute;finir l'adresse IP de l'&eacute;quipement.</span></p>
+		<p><span>Utilisez </span> &quot;Con_SlaveEquipmentAddress&quot; <span>pour d&eacute;finir l'adresse esclave de l'&eacute;quipement. (Modbus RTU seulement)</span></p>
+		<p>Utilisez &quot;Con_UnitNumber&quot; pour d&eacute;finir le num&eacute;ro unitaire de l'&eacute;quipement. (Modbus TCP/IP seulement)</p>
+		<p>Utilisez &quot;Con_DualRedundantIPAddress&quot; pour d&eacute;finir l'adresse IP de secours de l'&eacute;quipement.</p>
+		<p>Utilisez &quot;Con_EquipmentAddress&quot; pour d&eacute;finir l'adresse de l'&eacute;quipement pour l'esclave Modbus.</p>
+		<p><img src="Note_Moji.bmp" alt="" style="border: none;" width="51" height="25" border="0"></p>
+		<ul>
+			<li class="p-NoteText"><p class="NoteText">Si vous d&eacute;finissez l'adresse IP de l'&eacute;quipement sur 1.1.1.1, l'&eacute;quipement se met en mode Hors scrutation. Pour plus d'informations sur le mode Hors scrutation, reportez-vous &agrave; la section 5.3, <a href="ExternalDevice.chm::/Communication_Statistics.htm">Collecte de statistiques sur les pilotes</a>.</p></li>
+		</ul></td>
+	</tr>
+	<tr style="height: 154px;">
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" width="102" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">int [ ] value</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 75.535%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Un tableau entier disposant de quatre &eacute;l&eacute;ments utilis&eacute; pour d&eacute;finir l'adresse IP ou l'adresse esclave de l'&eacute;quipement.</p>
+		<p><img src="Note_Moji.bmp" alt="" style="border: none;" width="51" height="25" border="0"></p>
+		<ul>
+			<li class="p-NoteText"><p class="NoteText">Lorsque l'adresse IP est 192.168.1.10, les valeurs d'adresse IP dans le tableau sont les suivantes : array[0]=192, array[1]=168, array[2]=1, array[3]=10.</p></li>
+			<li class="p-NoteText"><p class="NoteText">Dans le tableau de cha&icirc;ne Con_EquipmentAddress, le premier &eacute;l&eacute;ment est l'ID de l'&eacute;quipement.</p></li>
+		</ul>
+		<p><img src="Limit.bmp" alt="" style="border: none;" width="77" height="24" border="0"></p>
+		<ul>
+			<li class="p-NoteText"><p class="NoteText">Le param&egrave;tre Con_SlaveEquipmentAddress n'est disponible que pour les unit&eacute;s Modbus RTU.</p></li>
+		</ul></td>
+	</tr>
+</table>
+<p style="font-weight: bold;">&nbsp;</p>
+<p style="font-weight: bold;">Exemple</p>
+<p style="font-weight: normal;">R&eacute;f&eacute;rez-vous aux exemples dans <a href="Scripts.chm::/Equipment_Methods.htm"  	 style="font-weight: normal;">18.9.1.10 M&eacute;thodes d'&eacute;quipement</a>.</p>
+<p style="font-weight: bold;">Valeur retourn&eacute;e</p>
+<p>Retourne la valeur Vrai si le param&egrave;tre existe et que la valeur peut &ecirc;tre &eacute;crite dans la SRAM.</p>
+<p>Retourne la valeur Faux si le param&egrave;tre n'existe pas ou que la valeur ne peut pas &ecirc;tre &eacute;crite dans la SRAM.</p>
+<p style="font-weight: bold;">Voir &eacute;galement</p>
+<p><a href="EquipmentFinalizeCommEquipmentChanges.htm">commitConfig</a>, <a href="Equipment_getcommequipmentproperty.htm">getProperty</a>, <a href="getStingProperty.htm">getStringProperty</a>, <a href="Equipmentopencommequipment.htm">openConfig</a></p>
+</body>
+</html>

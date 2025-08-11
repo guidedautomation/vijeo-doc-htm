@@ -1,0 +1,168 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="08 14, 2003 2:30:29 PM">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>Affichage d'une fenêtre popup</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h2>18.7.2 Affichage d'une fenêtre popup</h2>
+<h3><a name="1642b3b9347ca42c9b00b820c00c373fa=1"></a><a name="1642b3b9347ca42c9b00b820c00c373fa=1642b3b9347ca42c9b00b820c00c373fa=1"></a><a name="1"></a>18.7.2.1 Environnement d'exploitation</h3>
+<p>Le script d'exemple est configuré pour s'exécuter dans l'environnement d'exploitation défini.</p>
+<table style="vertical-align: top; left: 0px; top: 69px; margin-left: 40px;" cellspacing="0" width="90%">
+<col style="width: 20%;">
+<col style="width: 30%;">
+<col style="width: 40%;">
+<tr style="vertical-align: top;">
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">Machine cible</p>
+</td>
+<td colspan="2" style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 70%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Peut être configuré pour s'exécuter sur toutes les machines cibles.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td rowspan="2" style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; width: 20%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">Equipement</p>
+</td>
+<td colspan="2" style="border-bottom: Solid 1px #000000; width: 70%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Schneider Electric PLC &#160;Modbus (RTU)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; width: 30%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Adresses de périphérique</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 40%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">00100 à 00110</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p class="NoteImage"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Dans les instructions suivantes, vous devez configurer le pilote de périphérique dans Vijeo-Designer. Reportez-vous au chapitre 5 <a href="ExternalDevice.chm::/outline.htm">Communications</a>.</p>
+</li>
+</ul>
+<h3><a name="2642b3b9347ca42c9b00b820c00c373fa=2"></a><a name="2642b3b9347ca42c9b00b820c00c373fa=2642b3b9347ca42c9b00b820c00c373fa=2"></a><a name="2"></a>18.7.2.2 Opération Script</h3>
+<p>L'affichage de fenêtres popup est plus facile lorsque vous utilisez des commutateurs ou une animation sur appui. Dans certaines circonstances toutefois, vous voudrez peut-être qu'un autre événement déclenche l'affichage d'une fenêtre popup. C'est le cas des scripts.</p>
+<p>Dans le script suivant, la fenêtre popup s'affiche lorsque la valeur d'une variable change. La variable change suite au déclenchement d'une alarme.</p>
+<p class="Image"><img src="Popup_AlarmWindow_Labels.bmp" style="border: none;" alt="" width="376" height="155" border="0"></p>
+<p class="NoteImage"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul style="list-style: decimal;">
+<li class="p-NoteText">
+<p class="NoteText">Vous pouvez utiliser des actions de déclenchement d'une alarme (reportez-vous à la section 16.3.4 <a href="Alarms.chm::/Setting_up_Alarm_Action.htm">Configuration des actions d'alarme</a>) pour définir la fonctionnalité décrite dans cet exemple. Toutefois, avec ce type d'action, vous devez configurer la même opération pour chacune des variables. Ainsi, si vous avez 100 alarmes, vous devrez configurer 100 actions sur déclenchement. Cet exemple propose une configuration unique pouvant être utilisée pour un grand nombre d'alarmes.</p>
+</li>
+</ul>
+<h3><a name="3642b3b9347ca42c9b00b820c00c373fa=3"></a><a name="3642b3b9347ca42c9b00b820c00c373fa=3642b3b9347ca42c9b00b820c00c373fa=3"></a><a name="3"></a>18.7.2.3 Configuration des variables et de la fenêtre popup</h3>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Variables</h4>
+<table style="vertical-align: top; height: 119px; left: 0px; top: 1008px; margin-left: 40px;" cellspacing="0" width="90%">
+<col style="width: 20%;">
+<col style="width: 80%;">
+<tr style="vertical-align: top;">
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle">Nom</p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 80%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle">Description</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">Erreur</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; width: 80%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Variable tableau du type BOOL comportant 11 éléments, utilisée pour effectuer le suivi des alarmes déclenchées.</p>
+<p class="Tabletext">Affectez des adresses de périphérique (00100 à 00110) à chaque élément du tableau.</p>
+<p class="Tabletext">Error[0] = 00100 ... Error[10] = 00110.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; width: 20%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">AlarmsActive</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 80%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Variable BOOL interne.</p>
+<p class="Tabletext">Lorsque l'un des éléments de la variable Error est activé, AlarmsActive l'est aussi.</p>
+<p class="Tabletext">Cette variable joue le rôle de déclencheur pour l'affichage de la fenêtre popup.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Fenêtre popup</h4>
+<p>Créez la fenêtre popup qui s'affiche lors du déclenchement d'une alarme.</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="400">
+<col style="width: 60%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<tr style="vertical-align: top;">
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 60%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle">Navigateur</p>
+</td>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle">Nom</p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 20%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle">Numéro</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 60%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">Fenêtre popup</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Fenêtre1</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; width: 20%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">1</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; width: 60%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">Ecran de fenêtre popup</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; width: 20%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">AlarmPanel</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 20%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">10001</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

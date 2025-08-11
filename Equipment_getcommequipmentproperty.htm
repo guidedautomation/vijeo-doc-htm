@@ -1,0 +1,413 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>getProperty</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+ <h4>getProperty</h4>
+<p style="font-weight: bold;"><span><span><span><span><span style="font-weight: bold;">Fonction</span></span></span></span></span></p>
+<p>Retourne un tableau entier contenant les valeurs des propri&eacute;t&eacute;s de l'&eacute;quipement.</p>
+<p style="font-weight: bold;">Format</p>
+<p class="code" style="margin-left: 40px;">int[]EquipmentName.getProperty(String param);</p>
+<p style="font-weight: bold; margin-top: 6pt;">Param&egrave;tre</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; 
+		 margin-left: 40px;" cellspacing="0" width="90%">
+	<col width="100">
+	<col style="width: 25%;">
+	<col style="width: 60%;">
+	<tr>
+		<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; 
+			 padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" 
+			 width="100" bgcolor="#91AFD9"><p class="Tabletitle"><span  		 style="font-weight: bold;">Param&egrave;tre</span></p></td>
+		<td colspan="2" style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; 
+			 width: 85%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9"><p 
+			 class="Tabletitle"><span style="font-weight: bold;">Description</span></p></td>
+		
+	</tr>
+	<tr>
+		<td rowspan="12" style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; 
+			 vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" width="100" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">String param</p></td>
+		<td colspan="2" style="border-bottom: Solid 1px #000000; width: 85%; 
+			 vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;"><p>Une variable de cha&icirc;ne disposant des informations de configuration demand&eacute;es par l'&eacute;quipement.</p>
+		<p class="NoteImage"><img src="Note_Moji.bmp" alt="" style="border: none;" width="51" height="25" border="0"></p>
+		<ul>
+			<li class="p-NoteText"><p class="NoteText">Les param&egrave;tres de cha&icirc;ne ci-dessous ne fonctionnent que si votre pilote de p&eacute;riph&eacute;rique utilise les param&egrave;tres de communication correspondants. Veuillez tester votre &eacute;quipement pour assurer le fonctionnement.</p></li>
+		</ul></td>
+		
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 25%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;"><p>Con_IPAddress</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 60%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Retourne un tableau entier contenant la valeur de l'adresse IP de l'&eacute;quipement.</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 25%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;"><p>Con_DualRedundantIPAddress</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 60%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Retourne un tableau entier contenant la valeur de l'adresse IP de l'&eacute;quipement de sauvegarde. Ce param&egrave;tre est utile lorsque la communication est rompue entre l'&eacute;quipement principal et la cible et que vous avez besoin de l'adresse IP de l'&eacute;quipement de sauvegarde.</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 25%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;"><p>Con_EquipmentAddress</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 60%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Retourne un tableau entier contenant la valeur de l'adresse de l'&eacute;quipement.</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 25%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;"><p>Con_SlaveEquipmentAddress</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 60%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Retourne un tableau entier contenant la valeur de l'adresse esclave de l'&eacute;quipement.</p>
+		<p><img src="Limit.bmp" alt="" style="border: none;" width="77" height="24" border="0"></p>
+		<ul>
+			<li class="p-NoteText"><p class="NoteText">Ce param&egrave;tre n'est pris en charge que sur les unit&eacute;s Modbus RTU.</p></li>
+		</ul></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 25%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;"><p>Con_UnitNumber</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 60%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Retourne un tableau entier contenant la valeur du num&eacute;ro unitaire de l'&eacute;quipement.</p>
+		<p><img src="Limit.bmp" alt="" style="border: none;" width="77" height="24" border="0"></p>
+		<ul>
+			<li class="p-NoteText"><p class="NoteText">Ce param&egrave;tre est pris en charge uniquement sur les &eacute;quipements Modbus TCP/IP.</p></li>
+		</ul></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 25%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;"><p>Con_LocalStationAddress</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 60%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Retourne un tableau entier contenant la valeur de l'adresse de la borne locale.</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 25%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;"><p>Con_HardwareProtocol</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 60%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Retourne un tableau entier contenant la valeur de l'interface s&eacute;rie de l'&eacute;quipement.</p>
+		<table style="vertical-align: top;" cellspacing="0" width="63.957%">
+			<col style="width: 37.974%;">
+			<col style="width: 62.026%;">
+			<tr style="vertical-align: top;">
+				<td style="border: Solid 1px #000000; width: 37.974%; padding-right: 10px; 
+					 padding-left: 10px;"><p style="font-weight: bold;">Valeur retourn&eacute;e</p></td>
+				<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 62.026%; 
+					 padding-right: 10px; padding-left: 10px;"><p style="font-weight: bold;">Param&egrave;tre Interface s&eacute;rie</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 37.974%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">0</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 62.026%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">RS-232C</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 37.974%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">1</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 62.026%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">RS-485</p></td>
+			</tr>
+		</table>
+		<p>&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 25%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;"><p>Con_TransmissionSpeed</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 60%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Retourne un tableau entier contenant la valeur de la vitesse de transmission de l'&eacute;quipement.</p>
+		<table style="vertical-align: top;" cellspacing="0" width="100%">
+			<col style="width: 15.263%;">
+			<col style="width: 28.246%;">
+			<col style="width: 28.246%;">
+			<col style="width: 28.246%;">
+			<tr style="vertical-align: top;">
+				<td rowspan="2" style="border: Solid 1px #000000; width: 15.263%; 
+					 padding-right: 10px; padding-left: 10px;"><p style="font-weight: bold;">Valeur retourn&eacute;e</p></td>
+				<td colspan="3" style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 84.738%; 
+					 padding-right: 10px; padding-left: 10px;"><p style="font-weight: bold; 
+					 text-align: center;">Param&egrave;tre Vitesse de transmission</p></td>
+				
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 style="text-align: center; font-weight: bold;">Pilote Modbus RTU</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 style="text-align: center; font-weight: bold;">Pilote Modbus Esclave RTU</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 style="text-align: center; font-weight: bold;">Pilote Uni-Telway</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 15.263%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">0</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">2400</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">2400</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">4800</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 15.263%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">1</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">4800</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">4800</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">9600</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 15.263%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">2</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">9600</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">9600</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">19200</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 15.263%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">3</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">19200</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">19200</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">38400</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 15.263%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">4</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">38400</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">38400</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">57600</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 15.263%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">5</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">S.O.</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">S.O.</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 28.246%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">115200</p></td>
+			</tr>
+		</table>
+		<p>&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 25%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;"><p>Con_DataLength</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 60%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Retourne un tableau entier contenant la valeur de la longueur des donn&eacute;es.</p>
+		<table style="vertical-align: top;" cellspacing="0" width="63.957%">
+			<col style="width: 37.974%;">
+			<col style="width: 62.026%;">
+			<tr style="vertical-align: top;">
+				<td style="border: Solid 1px #000000; width: 37.974%; padding-right: 10px; 
+					 padding-left: 10px;"><p style="font-weight: bold;">Valeur retourn&eacute;e</p></td>
+				<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 62.026%; 
+					 padding-right: 10px; padding-left: 10px;"><p style="font-weight: bold;">Param&egrave;tre Longueur des donn&eacute;es</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 37.974%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">0</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 62.026%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">7</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 37.974%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">1</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 62.026%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">8</p></td>
+			</tr>
+		</table>
+		<p>&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 25%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;"><p>Con_StopBit</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 60%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Retourne un tableau entier contenant la valeur du bit d'arr&ecirc;t.</p>
+		<table style="vertical-align: top;" cellspacing="0" width="63.957%">
+			<col style="width: 37.974%;">
+			<col style="width: 62.026%;">
+			<tr style="vertical-align: top;">
+				<td style="border: Solid 1px #000000; width: 37.974%; padding-right: 10px; 
+					 padding-left: 10px;"><p style="font-weight: bold;">Valeur retourn&eacute;e</p></td>
+				<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 62.026%; 
+					 padding-right: 10px; padding-left: 10px;"><p style="font-weight: bold;">Param&egrave;tre Bit d'arr&ecirc;t</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 37.974%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">0</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 62.026%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">1</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 37.974%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">1</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 62.026%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">2</p></td>
+			</tr>
+		</table>
+		<p>&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; 
+			 width: 25%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;"><p>Con_Parity</p></td>
+		<td style="border-bottom: Solid 3px #000000; width: 60%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p>Retourne un tableau entier contenant la valeur du bit de parit&eacute;.</p>
+		<table style="vertical-align: top;" cellspacing="0" width="63.957%">
+			<col style="width: 37.974%;">
+			<col style="width: 62.026%;">
+			<tr style="vertical-align: top;">
+				<td style="border: Solid 1px #000000; width: 37.974%; padding-right: 10px; 
+					 padding-left: 10px;"><p style="font-weight: bold;">Valeur retourn&eacute;e</p></td>
+				<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 62.026%; 
+					 padding-right: 10px; padding-left: 10px;"><p style="font-weight: bold;">Param&egrave;tre Bit de parit&eacute;</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 37.974%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">0</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 62.026%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">Aucun</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 37.974%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">1</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 62.026%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">Pair</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+					 border-bottom: Solid 1px #000000; width: 37.974%; 
+					 padding-right: 10px; padding-left: 10px;"><p class="Tabletext">2</p></td>
+				<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+					 width: 62.026%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Tabletext">Impair</p></td>
+			</tr>
+		</table>
+		<p>&nbsp;</p></td>
+	</tr>
+</table>
+<p style="font-weight: bold;">Exemple :</p>
+<p class="Code" style="margin-left: 40px;">int [] data = ModbusEquipment01.getProperty( &quot;Con_IPAddress&quot; );</p>
+<p style="font-weight: bold;">Valeur retourn&eacute;e</p>
+<p>Retourne un tableau entier pour le param&egrave;tre d'&eacute;quipement ou une valeur nulle.</p>
+<p style="font-weight: bold;">Voir &eacute;galement</p>
+<p><a href="EquipmentFinalizeCommEquipmentChanges.htm">commitConfig</a>, <a href="getStingProperty.htm">getStringProperty</a>, <a href="Equipmentopencommequipment.htm">openConfig</a>, <a href="Equipmentsetcommequipmentproperty.htm">setProperty</a></p>
+</body>
+</html>

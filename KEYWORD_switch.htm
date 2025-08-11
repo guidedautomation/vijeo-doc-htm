@@ -1,0 +1,120 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="08 6, 2003 4:16:48 PM">
+<meta name="topic-status" content="In Progress">
+<meta name="topic-priority" content="0">
+<meta name="topic-time-estimate" content="0">
+<meta name="topic-comment" content="">
+<meta name="topic-id" content="KEYWORD_switch.htm">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>switch-case-default</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h4>switch-case-default</h4>
+
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14pt;" cellspacing="0" width="400">
+<tr>
+<td style="border: Solid 1px #000000;vertical-align: TOP; width: 152%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="code"><span style="font-weight: bold;">switch</span> (expression)</p>
+<p class="code" style="margin-left: 0px;">{</p>
+
+<p class="code" style="margin-left: 40px;"><span style="font-weight: bold;">case</span> literal01 <span style="font-weight: bold;">:</span></p>
+
+<p class="code" style="margin-left: 40px;">[les instructions sont ex&eacute;cut&eacute;es si l'expression est &eacute;gale &agrave; la valeur<span style="font-style: normal;">1</span>];</p>
+<p class="code" style="margin-left: 40px;">[<span style="font-weight: bold;">break</span>];</p>
+
+<p class="code" style="margin-left: 40px;"><span style="font-weight: bold;">case</span> literal02 <span style="font-weight: bold;">:</span></p>
+
+<p class="code" style="margin-left: 40px;">[les instructions sont ex&eacute;cut&eacute;es si l'expression est &eacute;gale &agrave; la <span>valeur2</span>. ];</p>
+<p class="code" style="margin-left: 40px;">[<span style="font-weight: bold;">default</span>] <span style="font-weight: bold;">:</span></p>
+<p class="code" style="margin-left: 40px;">[les instructions sont ex&eacute;cut&eacute;es lorsqu'aucune des valeurs case ne correspond &agrave; l'expression];</p>
+<p class="code" style="margin-bottom: 0;">}</p>
+</td>
+</tr>
+</table>
+<p>Les crochets [ ] indiquent des &eacute;l&eacute;ments optionnels. Les mots cl&eacute;s sont <span style="font-weight: bold;">en gras</span>.</p>
+<p class="note">L'expression switch doit correspondre &agrave; int ou char. Utilisez des valeurs litt&eacute;rales pour identifier les instructions case.</p>
+<p><span style="font-weight: bold;">switch</span> &eacute;value une expression, puis passe &agrave; l'instruction <span style="font-weight: bold;">case</span> qui correspond &agrave; la valeur de l'expression.</p>
+<p>Si la valeur &eacute;valu&eacute;e n'est pas repr&eacute;sent&eacute;e dans l'une des valeurs <span style="font-weight: bold;">case</span>, le script passe aux instructions <span style="font-weight: bold;">default</span> si elles existent ou quitte le bloc switch dans le cas contraire.</p>
+<p>Les instructions <span style="font-weight: bold;">case</span> sont ex&eacute;cut&eacute;es les unes apr&egrave;s les autres jusqu'&agrave; ce que le mot cl&eacute; <span style="font-weight: bold;">break</span> ou la fin du bloc switch soit atteint. Dans les deux cas, l'ex&eacute;cution des instructionsswitch est interrompue.</p>
+<p style="font-weight: bold;">Commentaires</p>
+<p>Chaque instruction case utilise une valeur litt&eacute;rale incluant des entiers et des caract&egrave;res. Notez que les caract&egrave;res correspondent &agrave; un nombre.</p>
+<p>Bien que le mot cl&eacute; <span style="font-weight: bold;">default</span> soit optionnel, l'utiliser dans tous les jeux d'instructions constitue une bonne habitude de programmation.</p>
+<p style="font-weight: bold;">Exemple</p>
+<p>Dans l'exemple ci-dessous, switch &eacute;value l'expression &quot;<span style="font-size: 10pt;">option</span>&quot;, acc&egrave;de alors &agrave; l'instruction case correspondante et &eacute;crit une valeur dans <span style="font-size: 10pt;">variable1</span>.</p>
+<table wrapperparagraphselector="P" style="margin-top: 12pt; margin-bottom: 12pt;" cellspacing="0" width="400">
+<tr>
+<td style="border: Solid 1px #000000;vertical-align: TOP; width: 100%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="code">char option;</p>
+
+<p class="code">switch (option)</p>
+
+<p class="code">{</p>
+
+<p class="code" style="margin-left: 40px;">case 'a':</p>
+
+<p class="code" style="margin-left: 80px;">variable1.write('b');</p>
+
+<p class="code" style="margin-left: 80px;">break;</p>
+
+<p class="code" style="margin-left: 40px;">case 'b':</p>
+
+<p class="code" style="margin-left: 80px;">variable1.write('c');</p>
+
+<p class="code" style="margin-left: 80px;">break;</p>
+
+<p class="code" style="margin-left: 40px;">case 'c':</p>
+
+<p class="code" style="margin-left: 80px;">variable1.write('d');</p>
+
+<p class="code" style="margin-left: 80px;">break;</p>
+
+<p class="code" style="margin-left: 40px;">default:</p>
+
+<p class="code" style="margin-left: 80px;">variable1.write('a');</p>
+
+<p class="code" style="margin-bottom: 0;">}</p>
+</td>
+</tr>
+</table>
+<p style="font-weight: bold;">Voir &eacute;galement</p>
+
+<p><a href="KEYWORD_break.htm">break</a>, <a href="KEYWORD_dowhile.htm">do-while</a>, <a href="KEYWORD_for.htm">for</a>, <a href="KEYWORD_if-else.htm">if-else</a>, <a href="KEYWORD_return.htm">return</a>, <a href="KEYWORD_while.htm">while</a></p>
+
+</body>
+</html>
