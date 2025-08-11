@@ -1,0 +1,131 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="08 9, 2003 3:12:39 PM">
+<meta name="topic-status" content="In Progress">
+<meta name="topic-priority" content="0">
+<meta name="topic-time-estimate" content="0">
+<meta name="topic-comment" content="">
+<meta name="topic-id" content="AlarmSummaryClear.htm">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>clear</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h4>clear</h4>
+
+<p style="font-weight: bold;">Fonction</p>
+<p>Cette m&eacute;thode permet de retirer tous les cas de l'alarme ou de l'&eacute;v&eacute;nement s&eacute;lectionn&eacute; &agrave; partir de toutes les listes d'alarmes (Actif, Historique, et Journal). La variable demeure dans l'&eacute;tat d'alarme, mais le message d'alarme de la variable n'appara&icirc;t plus dans n'importe quel affichage de r&eacute;sum&eacute;. M&ecirc;me si la variable passe de Haut &agrave; Tr&egrave;s haut, le message d'alarme de la variable n'appara&icirc;tra pas dans l'affichage de r&eacute;sum&eacute;.</p>
+<p>Ce comportement d&ucirc; au for&ccedil;age des alarmes de revenir &agrave; un &eacute;tat normal. Par la suite, le message d'alarme ne peut &ecirc;tre r&eacute;g&eacute;n&eacute;r&eacute; qu'apr&egrave;s l'alarme revient &agrave; la normale. Les alarmes retomb&eacute;es &agrave; la normale ne peuvent pas &ecirc;tre retir&eacute;es par la m&eacute;thode de script &laquo;clear&raquo;.</p>
+<p>Utilisez un param&egrave;tre pour garantir que seul le type d'alarme sp&eacute;cifi&eacute; est effac&eacute;.</p>
+<p class="NoteImage"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText" style="line-height: Normal;">Lorsque vous l'utilisez avec un groupe d'alarmes de diagnostic, cette m&eacute;thode de script ne touche pas les alarmes dans le buffer de diagnostic de l'automate. Cette m&eacute;thode de script n'interagit qu'avec l'affichage du r&eacute;sum&eacute; d'alarmes. Vous pouvez utilisez cette m&eacute;thode sur tous les messages d'alarme dans les affichages d'alarme historiques et de journal, et sur les messages d'alarme acquitt&eacute;s dans les affichages d'alarme actifs.</p>
+</li>
+</ul>
+<p style="font-weight: bold;">Format</p>
+<p class="code" style="margin-left: 40px;">int NomR&eacute;sum&eacute;Alarme.clear(int Msg_State);</p>
+<p style="margin-top: 6pt;"><span style="font-style: normal; font-weight: bold;">Param&egrave;tres</span></p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col style="width: 90%;">
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Param&egrave;tre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">int Msg_State</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="tabletext">Sp&eacute;cifie le type d'alarme effac&eacute; dans cette op&eacute;ration.</p>
+<p class="tabletext">0: Permet d'effacer le message d'alarme s'il est dans un &eacute;tat d'alarme Actif, ACQ, ou NONACQ.</p>
+<p class="tabletext">1: Permet d'effacer un message d'alarme d'&eacute;tat Acquitt&eacute;.</p>
+</td>
+</tr>
+</table>
+<p class="NoteImage" style="font-weight: normal;"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li style="font-weight: bold;" class="p-NoteText">
+<p class="NoteText" style="font-weight: normal;">Lorsque vous effacez une alarme, son &eacute;tat est modifi&eacute; &agrave; Retomb&eacute;e &agrave; la normale (Retomb&eacute;e) et ex&eacute;cute des actions d'alarme associ&eacute;es.</p>
+</li>
+</ul>
+<p class="NoteText2">Si le comportement de l'alarme = ACQ facultatif :</p>
+<ul>
+<li style="font-weight: bold;" class="p-NoteText2">
+<p class="NoteText2" style="font-weight: normal;">Effacer l'alarme ex&eacute;cute des actions configur&eacute;es avec la condition Lorsque l'alarme revient &agrave; la normale.</p>
+</li>
+<li style="font-weight: bold;" class="p-NoteText2">
+<p class="NoteText2" style="font-weight: normal;">Lorsque l'alarme est en un &eacute;tat actif, effacer l'alarme ex&eacute;cute &eacute;galement des actions configur&eacute;es avec la transition Actif &agrave; retomb&eacute;e.</p>
+</li>
+<li style="font-weight: bold;" class="p-NoteText2">
+<p class="NoteText2" style="font-weight: normal;">Lorsque l'alarme est en un &eacute;tat ACQ, effacer l'alarme ex&eacute;cute &eacute;galement des actions configur&eacute;es avec la transition ACQ &agrave; retomb&eacute;e.</p>
+</li>
+</ul>
+<p class="NoteText2" style="font-weight: normal;">Si le comportement de l'alarme = ACQ obligatoire :</p>
+<ul>
+<li class="p-NoteText2">
+<p class="NoteText2" style="font-weight: normal;">Effacer l'alarme ex&eacute;cute des actions configur&eacute;es avec la condition Lorsque l'alarme revient &agrave; la normale.</p>
+</li>
+<li class="p-NoteText2">
+<p class="NoteText2" style="font-weight: normal;">Lorsque l'alarme est en un &eacute;tat actif, effacer l'alarme ex&eacute;cute &eacute;galement des actions configur&eacute;es avec la transition Actif &agrave; ACQ et ACQ &agrave; Retomb&eacute;e.</p>
+</li>
+<li style="font-weight: bold;" class="p-NoteText2">
+<p class="NoteText2" style="font-weight: normal;">Lorsque l'alarme est en un &eacute;tat ACQ, effacer l'alarme ex&eacute;cute &eacute;galement des actions configur&eacute;es avec la transition ACQ &agrave; retomb&eacute;e.</p>
+</li>
+<li style="font-weight: bold;" class="p-NoteText2">
+<p class="NoteText2" style="font-weight: normal;">Lorsque l'alarme est dans un &eacute;tat NONACQ, effacer l'alarme ex&eacute;cute &eacute;galement des actions configur&eacute;es avec la transition NONACQ &agrave; retomb&eacute;e.</p>
+</li>
+</ul>
+<p style="font-weight: bold;">Valeur retourn&eacute;e</p>
+<p>Retourne un entier, 1 lorsque l'alarme est effac&eacute;e, 0 lorsque l'alarme n'est pas effac&eacute;e.</p>
+<p style="font-weight: bold;">Voir &eacute;galement</p>
+
+<p><a href="AlarmSummaryClearAll.htm">clearAll</a>, <a href="AlarmSummaryDelete.htm">delete</a>, <a href="AlarmSummaryDeleteAll.htm">deleteAll</a></p>
+
+<p class="NoteImage"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Si vous ouvrez un projet cr&eacute;e sous la version 4.1 ou sous une version ant&eacute;rieure, toute utilisation de <span style="font-family: 'Courier New', monospace;">clear</span> dans un script sera remplac&eacute; par <a href="AlarmSummaryDelete.htm"><span style="font-family: 'Courier New', monospace;">delete</span></a>.</p>
+</li>
+</ul>
+</body>
+</html>

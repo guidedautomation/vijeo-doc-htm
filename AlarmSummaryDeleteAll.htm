@@ -1,0 +1,112 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="topic-status" content="In Progress">
+<meta name="topic-priority" content="0">
+<meta name="topic-time-estimate" content="0">
+<meta name="topic-comment" content="">
+<meta name="topic-id" content="AlarmSummaryDeleteAll">
+<meta name="window-type" content="$global_NewWindow">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>deleteAll</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h4>deleteAll</h4>
+
+<p style="font-weight: bold;">Fonction</p>
+<p>Cette méthode de script supprime tous les messages d'alarme affichés dans le résumé d'alarmes. La méthode peut également supprimer tous les messages d'événement affichés dans le résumé d'événements. Les paramètres de la méthode permettent de définir les types d'alarmes ou d'événements supprimés du résumé.</p>
+<p>Si vous affectez un résumé d'alarmes à une catégorie d'alarme, la méthode de script deleteAll remet le compteur actuel à zéro. Si vous affectez un résumé d'alarmes à un groupe d'alarmes, la méthode de script deleteAll ne remet pas le compteur actuel à zéro.</p>
+<p>On ne devra pas confondre la méthode deleteAll avec la méthode clearAll. La méthode clearAll supprime les messages du résumé et de la base de données de messages. Une autre différence entre la méthode deleteAll et la méthode clearAll est que les messages supprimés par la méthode deleteAll peuvent réapparaître dans le résumé si l'état du message change (p. ex., Haut à HautHaut, Haut à Normal, et ainsi de suite). Les messages supprimés par la méthode clearAll n'apparaîtront plus dans le résumé à moins que le message devienne actif.</p>
+<p class="NoteImage"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText" style="line-height: Normal;">Lorsque vous l'utilisez avec un groupe d'alarmes de diagnostic, cette méthode de script ne touche pas les alarmes dans le tampon de diagnostic de l'automate. Cette méthode de script n'interagit qu'avec l'affichage du résumé d'alarmes. Vous pouvez utilisez cette méthode sur tous les messages d'alarme dans les affichages d'alarme historiques et de journal, et sur les messages d'alarme acquittés dans les affichages d'alarme actifs.</p>
+</li>
+</ul>
+<p style="font-weight: bold;">Format</p>
+<p class="code" style="margin-left: 40px;">int NomRésuméAlarme.deleteAll(int Msg_State, int Disp_State); </p>
+<p style="margin-top: 6pt;"><span style="font-style: normal; font-weight: bold;">Paramètres</span></p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col style="width: 90%;">
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Paramètre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">int Msg_State</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="tabletext">Spécifie les types d'alarmes ou d'événements supprimés dans cette opération.</p>
+<p class="tabletext">0: Permet de supprimer tous les messages d'alarme ou d'événement, quel que soit l'état dans lequel ils se trouvent.</p>
+<p class="tabletext">1: Permet de supprimer tous les messages d'alarme d'état Actif ou Non acquitté.</p>
+<p class="tabletext">2: Permet de supprimer tous les messages d'alarme d'état Retombé à la normale.</p>
+<p class="tabletext">3: Permet de supprimer tous les messages d'alarme d'état Acquitté.</p>
+<p class="tabletext">4: Permet de supprimer tous les messages d'alarme d'état Actif.</p>
+<p class="tabletext">5: Permet de supprimer tous les messages d'alarme d'état Non acquitté.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">int Disp_State</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="tabletext">Spécifie les types d'alarmes supprimées par cette opération.</p>
+<p class="tabletext">0: Permet de supprimer tous les messages d'alarme de l'affichage du résumé d'alarme.</p>
+<p class="tabletext">1: Permet de supprimer uniquement les messages d'alarme visibles de l'affichage du résumé d'alarme. En d'autres termes, les alarmes de la page courante.</p>
+</td>
+</tr>
+</table>
+<p><span style="font-weight: bold;">Valeur retournée</span></p>
+<p>Retourne le nombre d'alarmes supprimées durant cette opération, exprimé par un nombre entier.</p>
+<p style="font-weight: bold;">Voir également</p>
+
+<p><a href="AlarmSummaryClear.htm">clear</a>, <a href="AlarmSummaryClearAll.htm">clearAll</a>, <a href="AlarmSummaryDelete.htm">delete</a></p>
+
+<p class="NoteImage"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Si vous ouvrez un projet créé sous la version 4.1 ou sous une version antérieure, toute utilisation de <span style="font-family: 'Courier New', monospace;">clearAll</span> dans un script sera remplacée par <span style="font-family: 'Courier New', monospace;">deleteAll</span>.</p>
+</li>
+</ul>
+</body>
+</html>

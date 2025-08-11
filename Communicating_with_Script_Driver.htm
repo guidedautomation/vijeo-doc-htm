@@ -1,0 +1,57 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="11 6, 2003 3:58:35 PM">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>Utilisation du pilote de script</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h1>18.8 Utilisation du pilote de script</h1>
+<p>Le pilote de script est un pilote de communication série générique qui vous permet de communiquer avec de l'équipement série simple. Le pilote de script avec les méthodes <a href="Serial_read.htm">read</a> et <a href="Serial_write.htm">write</a> de Vijeo Designer, vous permettent d'envoyer et de recevoir des flux d'octets de données par le port série.</p>
+<p>Pour plus d'informations sur la structure et les paramètres des méthodes read/write, reportez-vous à la section 18.8.2, <a href="Serial_Driver_Methods.htm">Méthodes pour les pilotes de script</a>.</p>
+<p class="Image"><img src="Vijeo_PDScriptDriverCom.bmp" style="border: none;" alt="" width="329" height="119" border="0"></p>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Pourquoi utiliser un pilote de script ?</h4>
+<p>Le pilote de script est utilisé pour les communications série, telles que la communication avec un hyperterminal Windows, l'envoi de messages à une imprimante, ou l'envoi de messages à un équipement d'affichage de texte. Sur ces équipements distants, vous pouvez afficher d'importantes informations sur le statut (nombre actuel d'alarmes, de barres d'indicateurs créées, inventaire restant, etc.).</p>
+<p>Schneider Electric vous recommande d'utiliser le pilote de script uniquement pour les communications simples.</p>
+<p class="NoteImage"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Avertissement : Si vous exécutez le script très fréquemment dans le but de lire et d'écrire un grand nombre de caractères à l'aide du pilote de script, il se peut que d'autres composants de l'application Runtime soient ralentis.</p>
+</li>
+</ul>
+</body>
+</html>

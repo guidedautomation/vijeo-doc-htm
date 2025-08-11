@@ -1,0 +1,80 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>DiagBuffer.decodeStatusWords</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h4>DiagBuffer.decodeStatusWords</h4>
+
+<p style="font-weight: bold;"><span><span style="font-weight: bold;">Fonction</span></span></p>
+<p>Retourne un objet de type chaîne contenant les messages de statut des fichiers .sto associés à l'alarme sélectionnée. Chaque message est séparé par un caractère de nouvelle ligne.</p>
+<p>Cette méthode facilite l'obtention des messages de statut. Cette méthode obtient les mots de statut et le nom du fichier du bloc de fonction dérivé (DFB) de l'alarme sélectionnée, et recherche les messages de statut dans le fichier .sto pour que vous puissiez extraire les messages.</p>
+<p style="font-weight: bold;">Format</p>
+<p class="code" style="margin-left: 40px;">String DiagBuffer.decodeStatusWords(AlarmSummary AlarmSummaryName);</p>
+<p style="font-weight: bold; margin-top: 6pt;"><span style="font-weight: bold;">Paramètre</span></p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col style="width: 90%;">
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Paramètre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">AlarmSummary</p>
+
+<p class="TableDefinitions">AlarmSummaryName</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Définissez le nom de l'objet du résumé d'alarmes qui affiche les alarmes de diagnostic.</p>
+</td>
+</tr>
+</table>
+<p style="font-weight: bold;"><span style="font-weight: bold;">Valeur retournée</span></p>
+<p>Si l'alarme sélectionnée dans le résumé d'alarmes est une alarme de bloc de fonction dérivé (DFB) et que des fichiers .sto sont disponibles, retourne un objet de type chaîne avec les messages de statut associés. Chaque message de statut est séparé par un caractère de nouvelle ligne. La langue du système actuelle définit la langue des messages de statut. Puisque l'on peut modifier les messages de statut sans que le tampon de diagnostic ne génère un nouvel enregistrement d'alarme de diagnostic, utilisez cette fonction dans un script périodique afin d'assurer que les messages sont mis à jour dans l'application de façon continue.</p>
+<p>Retourne une chaîne vide lorsque l'alarme n'est pas une alarme DFB, si des fichiers .sto ne sont pas disponibles, ou si aucune alarme n'est sélectionnée..</p>
+<p style="font-weight: bold;"><span style="font-weight: bold;">Voir également</span></p>
+
+<p><a href="DiagBuffer.updateStatusWords.htm">updateStatusWords</a>, <a href="DiagBuffer_getDfbName.htm">getDfbName</a>, <a href="DiagBuffer_getStatusWords.htm">getStatusWords</a></p>
+
+</body>
+</html>

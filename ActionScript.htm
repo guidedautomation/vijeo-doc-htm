@@ -1,0 +1,162 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="11 6, 2003 3:50:37 PM">
+<meta name="topic-status" content="In Progress">
+<meta name="topic-priority" content="0">
+<meta name="topic-time-estimate" content="0">
+<meta name="topic-comment" content="">
+<meta name="topic-id" content="17.2.4 Action Scripts">
+<meta name="window-type" content="$global_NewWindow">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>Scripts d'alarme</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h2>18.2.2 Scripts d'alarme</h2>
+<p>Les scripts d'alarme s'exécutent lorsqu'une alarme se déclenche ou lorsqu'un message d'alarme est sélectionné dans l'objet résumé d'alarme.</p>
+<ul>
+<li class="p-Bullet">
+<p class="Bullet">Si vous souhaitez exécuter un script lorsqu'une alarme devient active, configurez une Alarme Actions sur déclenchement.</p>
+</li>
+</ul>
+<p class="Image" style="margin-left: 40px;"><span style="margin-left: 40px;"><img src="Alarm_Action_Trigger.bmp" style="border: none;" alt="" width="287" height="127" border="0"></span></p>
+<ul>
+<li class="p-Bullet">
+<p class="Bullet">Si vous souhaitez exécuter un script lorsque le message d'alarme est sélectionné dans un affichage de résumé d'alarme, configurez une Alarme Actions sur appui.</p>
+</li>
+</ul>
+<p class="Image" style="margin-left: 40px;"><span style="margin-left: 40px;"><img src="Action_Alarm_Touch.bmp" style="border: none;" alt="" width="287" height="121" border="0"></span></p>
+<p class="NoteImage" style="margin-left: 0px;"><img src="Limit.bmp" style="border: none; margin-left: 0px; margin-right: 0px; margin-top: 10px; margin-bottom: 0px;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Si un script de déclenchement d'alarme utilise des boucles <span style="font-weight: bold;">while</span> ou <span style="font-weight: bold;">for</span> et ne se termine pas en cinq secondes, ou si un script Action sur appui utilise des boucles <span style="font-weight: bold;">while</span> ou <span style="font-weight: bold;">for</span> et ne se termine pas en deux secondes, le script sera terminé pour les opérations d'écran puissent continuer.</p>
+</li>
+</ul>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Ajout des scripts de déclenchement d'alarme</h4>
+<p>Configurez les scripts de déclenchement d'alarme à partir des propriétés des alarmes d'une variable. Vous pouvez configurer une action sur appui, telle que décrite dans les étapes suivantes, ou une action sur déclenchement. Pour plus d'informations sur comment configurer une action sur déclenchement, reportez-vous à la section 16.3.4.1, <a href="Alarms.chm::/Action_at_Alarm_Trigger.htm">Actions sur déclenchement</a>.</p>
+<ol style="list-style: decimal;">
+<li class="p">
+<p>Dans l'éditeur de variables, cliquez deux fois sur le numéro de ligne d'une variable pour afficher la boîte de dialogue Propriétés de la variable.</p>
+</li>
+</ol>
+<p class="Image" style="margin-left: 40px;"><img src="alarm_variable_dialog.bmp" style="border: none;" alt="" width="442" height="357" border="0"></p>
+<ol start="2" style="list-style: decimal;">
+<li class="p">
+<p>Dans l'onglet Alarmes, cochez la case Alarme puis cliquez au choix sur le bouton Action sur appui ou Action sur déclenchement.</p>
+</li>
+<li class="p">
+<p>Cliquez sur Ajouter, puis sélectionnez Script en tant que Fonction.</p>
+</li>
+</ol>
+<p class="Image" style="margin-left: 40px;"><img src="Action_Script.bmp" style="border: none;" alt="" width="300" height="227" border="0"></p>
+<ol start="4" style="list-style: decimal;">
+<li class="p">
+<p>Cliquez deux fois sur le champ Condition puis définissez la condition qui doit être vraie pour que l'opération soit exécutée.</p>
+</li>
+</ol>
+<p class="Image" style="margin-left: 40px;"><img src="Condition_dialog.bmp" style="border: none;" alt="" width="300" height="194" border="0"></p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="90%">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 80%;">
+<tr style="vertical-align: top;">
+<td colspan="2" style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle">Propriété</p>
+</td>
+<th style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 80%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle" style="text-align: left;">Description</p>
+</th>
+</tr>
+<tr style="vertical-align: top;">
+<td colspan="2" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">Toujours</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; width: 80%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Action sur appui. Le script s'exécute lorsque le message d'alarme est sélectionné dans le résumé d'alarme.</p>
+<p class="Tabletext">Action sur déclenchement. Le script s'exécute lorsque l'alarme se déclenche.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td rowspan="3" style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; width: 10%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">Conditionnel</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 10%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">Condition d'alarme :</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; width: 80%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p>Disponible lors de la configuration des variables Entier ou Flottant. Configurez ce paramètre pour exécuter le script lorsqu'une alarme atteint la limite d'alarme.</p>
+<p class="Tabletext">&#160;</p>
+<p class="Tabletext">Par exemple, lorsque le Type d'alarme est Limite, vous pouvez exécuter le script pour une limite d'alarme (Très bas, Bas, Haut ou Très haut) en sélectionnant la limite dans le champ Condition d'alarme.</p>
+<p class="Image"><img src="Alarm_Type.bmp" style="border: none;" alt="" width="442" height="228" border="0"></p>
+<p class="Image"><img src="Condition_limit.bmp" style="border: none;" alt="" width="262" height="114" border="0"></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 10%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">AND, OR</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; width: 80%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Lorsque les cases à cocher Condition d'alarme et Si sont cochées, vous pouvez définir si le script est exécuté lorsque les deux instructions sont vraies (AND) ou lorsque l'une ou l'autre des instructions est vraie (OR).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; width: 10%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">Si</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 80%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Cochez la case Si puis définissez une variable ou une expression. Le script s'exécute lorsque la valeur de la variable ou de l'expression est différente de zéro.</p>
+<p class="Image"><img src="If_expression.bmp" style="border: none;" alt="" width="288" height="33" border="0"></p>
+<p class="Tabletext">En d'autres termes, le script ne s'exécute pas lorsque la valeur est égale à zéro.</p>
+<p class="Tabletext">Pour plus d'informations sur l'écriture d'expressions, reportez-vous à la section 6.14, <a href="InputAddress.chm::/assigne_var_with_expression.htm">Affectation des variables à l'aide des expressions</a>.</p>
+</td>
+</tr>
+</table>
+<ol start="5" style="list-style: decimal;">
+<li class="p">
+<p>Cliquez deux fois sur la cellule Opération pour accéder à la boîte de dialogue Script et écrire le script.</p>
+</li>
+</ol>
+<p class="Image" style="margin-left: 40px;"><img src="script_operation_configuration.bmp" style="border: none;" alt="" width="508" height="193" border="0"></p>
+<p style="margin-left: 40px;">Pour obtenir des instructions sur l'écriture de scripts, reportez-vous à la section 18.3, <a href="Writing_scripts.htm">Ecriture de scripts</a>.</p>
+<p class="NoteImage"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Pour ajouter des espaces [Tab] lorsque vous utilisez des scripts de déclenchement d'alarme, appuyez sur [Ctrl]+[Tab] puisque l'éditeur de scripts est une boîte de dialogue.</p>
+</li>
+</ul>
+</body>
+</html>
