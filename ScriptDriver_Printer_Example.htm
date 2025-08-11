@@ -1,0 +1,184 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="template" content="Vijeo_template.htt">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>Exemple : Envoi des valeurs de variable vers une imprimante</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h2>18.8.7 Exemple : Envoi des valeurs de variable vers une imprimante</h2>
+<p>Le script suivant utilise le pilote de script et les méthodes <a href="Serial_read.htm">read</a> et <a href="Serial_write.htm">write</a> pour envoyer les valeurs de variable actuelles et les noms des variables vers l'imprimante. Le script s'exécute chaque heure et imprime les noms et les valeurs des variables importantes dans le projet.</p>
+<p class="Image"><img src="ScriptDriver_Printer_Illustration.bmp" style="border: none;" alt="" width="363" height="90" border="0"></p>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Opérations préalables à l'écriture du script</h4>
+<ol style="list-style: decimal;">
+<li style="font-weight: normal;" class="p">
+<p style="font-weight: normal;">Ajoutez le pilote de script et renommez-le <span style="font-weight: bold;">Print_Variables</span>.<br>
+Reportez-vous à la section 18.8.3, <a href="ScriptDriver_Setting_Up_the_Driver.htm">Configuration du pilote de script</a>.</p>
+</li>
+<li style="font-weight: normal;" class="p">
+<p style="font-weight: normal;">Connectez l'équipement au port COM défini.<br>
+Reportez-vous à la section 18.8.4, <a href="ScriptDriver_Cable_Connections.htm">Connexions de câble</a>.</p>
+</li>
+<li style="font-weight: normal;" class="p">
+<p style="font-weight: normal;">Configurez la variable.</p>
+</li>
+</ol>
+<table style="vertical-align: top; margin-left: 40px; left: 0px; top: 283px; height: 278px;" cellspacing="0" width="936">
+<col style="width: 25%;">
+<col style="width: 75%;">
+<tr style="vertical-align: top;">
+<td style="width: 25%; padding-right: 10px; padding-left: 10px;">
+<p><img src="ScriptDriver_PrintVariables.bmp" style="border: none;" alt="" width="125" height="276" border="0"></p>
+</td>
+<td style="width: 75%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">PrintValues</p>
+
+<p>Variable de type entier comportant 10 éléments. Le nom et la valeur de chaque élément dans cette variable sont envoyés vers l'imprimante.</p>
+</td>
+</tr>
+</table>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Ecriture du script</h4>
+<p>Le script est un script d'application qui s'exécute à l'heure juste et imprime les valeurs dans le tableau de variable PrintValues.</p>
+<ol start="1" style="list-style: decimal;">
+<li class="p">
+<p>Créez un script d'action disposant des propriétés suivantes :<br>
+Type de déclenchement : Conditionnel<br>
+Variable de déclenchement : _Hour (variable système)<br>
+Déclenchement : Sur modification de données</p>
+</li>
+</ol>
+<ol start="2" style="list-style: decimal;">
+<li class="p">
+<p>Ouvrez le script d'action et écrivez le script suivant pour envoyer les noms et les valeurs de la variable vers l'imprimante.</p>
+</li>
+</ol>
+<p class="Code" style="margin-left: 40px;"><span style="color: #008000;">// 1. Caractères de contrôle de l'imprimante</span></p>
+<p class="Code" style="margin-left: 40px;">byte LineFeed = (byte) 0x0a; &#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #008000;">// Changement de ligne</span></p>
+<p class="Code" style="margin-left: 40px;">byte CarriageReturn = (byte) 0x0d; &#160;<span style="color: #008000;">// Retour de chariot</span></p>
+<p class="Code" style="margin-left: 40px;">byte FormFeed = (byte) 0x0c; &#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #008000;">// Présentation de page suivante</span></p>
+<p class="Code" style="margin-left: 40px; color: #008000;">&#160;</p>
+<p class="Code" style="margin-left: 40px; color: #008000;">// 2. Buffer de l'imprimante et d'autres variables</p>
+
+<p class="Code" style="margin-left: 40px;">byte PrintBuffer[] = new byte[1024];</p>
+
+<p class="Code" style="margin-left: 40px;">char[] sendToPrinterTMP; <span style="color: #008000;">// tableau de caractères temporaire</span></p>
+<p class="Code" style="margin-left: 40px;">byte sendToPrinter[]; &#160;&#160;&#160;<span style="color: #008000;">// tableau d'octet pour chaque variable</span></p>
+<p class="Code" style="margin-left: 40px;">int numOfChar = 0, &#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #008000;">// longueur de la chaîne</span></p>
+
+<p class="Code" style="margin-left: 40px;">i, j, k, BufferPosition = 0;</p>
+
+<p class="Code" style="margin-left: 40px; color: #008000;">&#160;</p>
+<p class="Code" style="margin-left: 40px; color: #008000;">// 3. Imprimer les valeurs de variable</p>
+
+<p class="Code" style="margin-left: 40px;">for (i=0; i&lt;10; i++)</p>
+
+<p class="Code" style="margin-left: 40px;">{</p>
+<p class="Code" style="color: #008000; margin-left: 80px;">// a. Créez une chaîne avec le nom et la valeur de la variable</p>
+
+<p class="Code" style="margin-left: 80px;">String LocalMessage = "PrintValues" + "[" + i + "]";</p>
+
+<p class="Code" style="margin-left: 80px;">LocalMessage.concat(" = " + PrintValues[i].getStringValue());</p>
+
+<p class="Code" style="color: #008000; margin-left: 80px;">// b. Convertissez le tableau de chaînes à un tableau de caractères</p>
+
+<p class="Code" style="margin-left: 80px;">numOfChar = LocalMessage.length();</p>
+
+<p class="Code" style="margin-left: 80px;">sendToPrinter = new byte[numOfChar]; <span style="color: #008000;">// définissez la taille du tableau d'octets</span></p>
+
+<p class="Code" style="margin-left: 80px;">sendToPrinterTMP = LocalMessage.toCharArray();</p>
+
+<p class="Code" style="color: #008000; margin-left: 80px;">// c. Convertissez le tableau de caractères unicode au tableau d'octets ASCII</p>
+
+<p class="Code" style="margin-left: 80px;">for (j=0; j&lt;numOfChar; j++)</p>
+
+<p class="Code" style="margin-left: 80px;">{</p>
+
+<p class="Code" style="margin-left: 120px;">sendToPrinter[j] = (byte)sendToPrinterTMP[j];</p>
+
+<p class="Code" style="margin-left: 80px;">}</p>
+
+<p class="Code" style="margin-left: 80px; color: #008000;">// d. Déplacez les caractères vers le tableau de buffer d'impression</p>
+
+<p class="Code" style="margin-left: 80px;">for (k=0; k&lt;j; k++)</p>
+
+<p class="Code" style="margin-left: 80px;">{</p>
+
+<p class="Code" style="margin-left: 120px;">PrintBuffer[BufferPosition++] = sendToPrinter[k];</p>
+
+<p class="Code" style="margin-left: 80px;">}</p>
+
+<p class="Code" style="margin-left: 80px; color: #008000;">// e. Allez à la ligne suivante</p>
+
+<p class="Code" style="margin-left: 80px;">PrintBuffer[BufferPosition++] = LineFeed;</p>
+
+<p class="Code" style="margin-left: 80px;">PrintBuffer[BufferPosition++] = CarriageReturn;</p>
+
+<p class="Code" style="margin-left: 40px;">}</p>
+<p class="Code" style="margin-left: 40px; color: #008000;">// 4. Aller à la page suivante</p>
+
+<p class="Code" style="margin-left: 40px;">PrintBuffer[BufferPosition++] = FormFeed;</p>
+
+<p class="Code" style="margin-left: 40px; color: #008000;">// 5. Envoyer le buffer vers le pilote de script</p>
+
+<p class="Code" style="margin-left: 40px;">Print_Variables.write(true, BufferPosition+1, PrintBuffer);</p>
+
+<p class="Code" style="margin-left: 40px;">&#160;</p>
+<h5>1. Caractères de contrôle de l'imprimante</h5>
+<p>Créez des variables de script locales pour les commandes d'impression : nouvelle ligne, changement de ligne, et retour de chariot. Ces variables faciliteront l'écriture, la lecture, et la maintenance du script.</p>
+<h5>2. Buffer de l'imprimante et d'autres variables</h5>
+<p>Les tableaux d'octets et de caractères sont également exigés par le script pour le buffer d'impression et le stockage temporaire des chaînes et des variables de type TOR pour divers indices.</p>
+<h5>3. Imprimer les valeurs de variable</h5>
+<p>Ces lignes de script génèrent les noms et les valeurs de la variable et les font sortir vers la variable PrintBuffer.</p>
+<p>a. Créer une chaîne avec le nom de variable et la valeur suivants : Le script crée une variable de chaîne locale et y affecte le nom de la variable et la valeur qui sera imprimée.</p>
+<p>b. Convertir le tableau de chaînes en un tableau de caractères Le script utilise tout d'abord le nombre de caractères dans la chaîne pour définir la taille d'un nouveau tableau d'octets. Ensuite, le script convertit la variable de chaîne locale en un tableau de caractères.</p>
+<p>c. Convertir le tableau de caractères unicode en un tableau d'octets ASCII Le script fond chaque caractère du tableau de caractères dans un octet et l'affecte à l'élément correspondant dans le tableau d'octets récemment créé. Chaque élément du tableau d'octets équivaut maintenant à un caractère ASCII.</p>
+<p>d. Déplacer les caractères vers le tableau de buffer d'impression Le script copie les caractères d'octet à partir du tableau d'octets temporaire dans le tableau d'octets PrintBuffer.</p>
+<p>e. Aller à la ligne suivante : Le script ajoute des caractères de format d'impression à la fin du message pour aller à la ligne suivante.</p>
+<p class="NoteImage"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Vous ne pouvez pas envoyer une chaîne directement au pilote de script. Convertissez tout d'abord la chaîne en un tableau d'octets.</p>
+</li>
+</ul>
+<h5>4. Aller à la page suivante</h5>
+<p>Une fois que tous les noms et les valeurs de la variable sont ajoutés au tableau d'octets PrintBuffer, le script ajoute le caractère de contrôle de dévidement de page à la fin.</p>
+<h5>5. Envoyer le buffer vers le pilote de script</h5>
+<p>Le script envoie le tableau d'octets PrintBuffer vers le pilote de script.</p>
+<p>Le premier paramètre est faux parce que le buffer de réception (port série du pilote de script) n'est pas utilisé pour recevoir des informations à partir de l'imprimante.</p>
+<p>Le deuxième paramètre utilise la variable BufferPosition parce qu'il effectue un suivi du dernier numéro d'élément utilisé dans le tableau d'octets PrintBuffer. Nous devons ajouter 1 à la BufferPosition parce les numéros d'élément de tableau commence à la position 0.</p>
+<p>Le troisième paramètre est le tableau d'octets PrintBuffer, qui stocke tous les noms et toutes les valeurs de la variable et les caractères de contrôle d'impression dans le tableau entier PrintValues.</p>
+</body>
+</html>

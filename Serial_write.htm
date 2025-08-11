@@ -1,0 +1,125 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="09 2, 2003 5:57:24 PM">
+<meta name="topic-status" content="In Progress">
+<meta name="topic-priority" content="0">
+<meta name="topic-time-estimate" content="0">
+<meta name="topic-comment" content="">
+<meta name="topic-id" content="write">
+<meta name="window-type" content="$global_NewWindow">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>write</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h4>write</h4>
+
+<p style="font-weight: bold;"><span><span style="font-weight: bold;">Fonction</span></span></p>
+<p>Envoie la chaîne définie comme flux d'octets au port de communication spécifié.</p>
+<p>Vous pouvez utiliser les méthodes read/write du pilote de script pour réaliser les communications de base entre la machine cible et un équipement. Cet équipement peut être une imprimante, un équipement ou une autre machine cible.</p>
+<p style="font-weight: bold;">Format</p>
+<p class="code" style="margin-left: 40px;">boolean NomPiloteScript.write(</p>
+
+<p class="code" style="margin-left: 80px;">boolean clearBuffer,</p>
+
+<p class="code" style="margin-left: 80px;">int numOfBytes,</p>
+
+<p class="code" style="margin-left: 80px;">byte[] data );</p>
+
+<p style="margin-top: 6pt;"><span style="font-weight: bold;">Paramètres</span></p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col width="450">
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Paramètre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="450">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">boolean clearBuffer</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" width="450">
+<p class="tabletext" style="margin-bottom: 0; font-weight: normal;">A Vrai, efface toute donnée du buffer de réception de la machine cible (buffer du pilote de script) avant la transmission.</p>
+<p class="NoteImage"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul>
+<li style="font-weight: normal;" class="p-NoteText">
+<p class="NoteText">Utilisez ce paramètre lorsque vous attendez une réponse de l'équipement série. Configurez ce paramètre à Vrai afin de retirer toutes les données stockées dans le buffer de réception, qui donc facilite l'analyse des données reçues.</p>
+</li>
+<li style="font-weight: normal;" class="p-NoteText">
+<p class="NoteText">Si l'équipement série connecté poursuit l'envoi et la réception des données, ce paramètre devrait être false les données dans le buffer du pilote de script ne sont pas effacées. Il existe peut-être des données qui devraient toujours être lues qui ont été envoyées par l'équipement connecté.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">int numOfBytes</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" width="450">
+<p class="tabletext" style="margin-bottom: 0;">Définit le nombre d'octets dans la transmission de données. Vous pouvez écrire jusqu'à 1024 octets de données dans une transmission unique.</p>
+<p class="NoteImage"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Essayez de configurer les applications pour que vous ne deviez pas écrire des montants importants de données. Toutes les opérations sur la machine cible sont bloquées jusqu'à ce que l'opération d'écriture soit terminée.</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">Lorsque vous écrivez 1024 octets avec une vitesse de transmission de 19200 bps, la machine cible arrête de s'exécuter pour 2 à 3 secondes.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">byte[] data</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" width="450">
+<p class="tabletext" style="margin-bottom: 0;">Données envoyées au port de communication telles que définies dans le pilote de script.</p>
+</td>
+</tr>
+</table>
+<p style="font-weight: bold;">Valeur retournée</p>
+<p>Retourne true lorsque les données sont écrites avec succès dans le buffer du pilote. Sinon, renvoie la valeur false.</p>
+<p style="font-weight: bold;"><span style="font-weight: bold;">Commentaires</span></p>
+<p>Une valeur vraie ne garantie pas que les données ont été écrites avec succès dans le périphérique. Une valeur vraie indique seulement que les données ont été écrites avec succès dans le buffer du pilote.</p>
+<p>La méthode write bloque l'exécution de toutes autres opérations lors de l'envoi des données via le port série.</p>
+<p>Pour utiliser les méthodes read/write de pilote de script, vous devez tout d'abord configurer un pilote de script. Reportez-vous à la section 18.8.3, <a href="ScriptDriver_Setting_Up_the_Driver.htm">Configuration du pilote de script</a>.</p>
+</body>
+</html>

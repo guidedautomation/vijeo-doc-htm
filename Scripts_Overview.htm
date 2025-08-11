@@ -1,0 +1,135 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="08 14, 2003 5:16:26 PM">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>Programmation avec des scripts</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h1>18.1 Programmation avec des scripts</h1>
+<p>Un script Vijeo-Designer contient des instructions écrites par des utilisateurs expérimentés afin de programmer le type de réaction de la machine cible face aux événements en temps réel, tels que : une pression sur un appui, une modification d'écran ou un changement de valeur. La principale raison de l'utilisation de scripts Vijeo-Designer s'explique par le fait que la programmation n'est pas possible à l'aide des objets ou d'une animation. Une autre raison justifiant le recours aux scripts est que vous pouvez utiliser des variables de source externe dans les opérations de script afin d'ajouter une dimension de programmation susceptible de manquer dans le programme de l'équipement.</p>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Scripts Vijeo-Designer et Java</h4>
+<p>Les scripts Vijeo-Designer sont basés sur le langage de programmation Java. Vous pouvez utiliser une partie des méthodes et classes Java, en plus des méthodes spécifiques à Vijeo-Designer. En dépit des différences (reportez-vous à la section 18.3.4 <a href="Limitations.htm">Points clés</a>) entre les scripts Vijeo-Designer et Java, vous pouvez, dans une large mesure, utiliser les opérateurs et les objets comme lorsque vous programmez dans Java.</p>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Structure</h4>
+<p>Les scripts sont composés de deux parties : le déclenchement et les instructions codées.</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="91.109%">
+<col style="width: 21.952%;">
+<col style="width: 78.048%;">
+<tr style="vertical-align: top;">
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.952%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">Déclenchement</p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 78.048%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Le déclenchement définit le moment où le script est exécuté. Les déclenchements varient en fonction du type de script.</p>
+<p class="Image"><img src="Panel_condition.bmp" style="border: none;" alt="" width="451" height="386" border="0"></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; width: 21.952%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED">
+<p class="TableDefinitions">Instructions</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 78.048%; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Les instructions font référence au script réel, tel qu'il s'affiche dans l'Editeur de scripts.<br>
+Pour plus d'informations, reportez-vous à la section 18.3 <a href="Writing_scripts.htm">Ecrire des scripts</a>.</p>
+<p class="Image"><img src="vijeo_panel_script.bmp" style="border: none;" alt="" width="488" height="349" border="0"></p>
+</td>
+</tr>
+</table>
+<p>Configurez le déclenchement et les instructions de vos scripts dans l'ordre suivant.</p>
+
+<table style="vertical-align: top; margin-bottom: 10px; left: 0px; top: 131px; margin-left: 40px;" cellspacing="0" width="50%">
+<col style="width: 100%;">
+<tr style="vertical-align: top;">
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 100%; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle" style="text-align: center;">Etapes</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 100%; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<table style="border: Double 3px #0000ff;vertical-align: top; margin-top: 10px; height: 25px; left: 3px; top: 0px;" cellspacing="0" align="center" width="307">
+<col style="width: 100%;">
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000;width: 100%; padding-right: 10px; padding-left: 10px;">
+<p class="Tabletext">1. Créez un script. Il en existe trois types : Ecran, Sur appui, et Alarme.</p>
+</td>
+</tr>
+</table>
+<p class="Image" style="text-align: center;"><img src="arrow.bmp" style="border: none;" alt="" width="24" height="43" border="0"></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 100%; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<table style="border: Double 3px #0000ff;vertical-align: top; margin-top: 10px; height: 25px; left: 3px; top: 0px;" cellspacing="0" align="center" width="307">
+<col style="width: 100%;">
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000;width: 100%; padding-right: 10px; padding-left: 10px;">
+<p class="Tabletext">2. Configurez le déclenchement.</p>
+</td>
+</tr>
+</table>
+<p class="Image" style="text-align: center;"><img src="arrow.bmp" style="border: none;" alt="" width="24" height="43" border="0"></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 100%; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<table style="border: Double 3px #0000ff;vertical-align: top; margin-top: 10px; height: 25px; left: 3px; top: 0px;" cellspacing="0" align="center" width="307">
+<col style="width: 100%;">
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000;width: 100%; padding-right: 10px; padding-left: 10px;">
+<p class="Tabletext">3. Dans l'Editeur de scripts, écrivez les instructions codées à exécuter lors du déclenchement du script.</p>
+</td>
+</tr>
+</table>
+<p class="Image" style="text-align: center;"><img src="arrow.bmp" style="border: none;" alt="" width="24" height="43" border="0"></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-bottom: Solid 3px #000000; width: 100%; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<table style="border: Double 3px #0000ff;vertical-align: top; margin-top: 10px; height: 25px; left: 3px; top: 0px;" cellspacing="0" align="center" width="307">
+<col style="width: 100%;">
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000;width: 100%; padding-right: 10px; padding-left: 10px;">
+<p class="Tabletext">4. Validez le script.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

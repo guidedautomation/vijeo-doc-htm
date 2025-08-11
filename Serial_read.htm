@@ -1,0 +1,157 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="09 2, 2003 5:57:47 PM">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>read</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h4>read</h4>
+
+<p style="font-weight: bold;"><span style="font-weight: bold;">Fonction</span></p>
+<p>Lit le flux d'octets depuis le port de communication défini.</p>
+<p>Vous pouvez utiliser les méthodes read/write du pilote de script pour réaliser les communications de base entre la machine cible et un équipement. Cet équipement peut être une imprimante, un équipement ou une autre machine cible.</p>
+<p style="font-weight: bold;">Format</p>
+<p class="code" style="margin-left: 40px;">int NomPiloteScript.read(</p>
+
+<p class="code" style="margin-left: 80px;">int timeout,</p>
+
+<p class="code" style="margin-left: 80px;">int numOfBytes,</p>
+
+<p class="code" style="margin-left: 80px;">byte[] data );</p>
+
+<p style="margin-top: 6pt;"><span style="font-weight: bold;">Paramètres</span></p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col>
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Paramètre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">int timeout</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="tabletext" style="margin-bottom: 0;">Spécifie la durée pendant laquelle la méthode read attend les données avant de s'arrêter. Dans la plupart des cas, timeout devrait être zéro.</p>
+<p class="NoteImage"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Lorsqu'il n'y a aucune donnée à lire à partir du port série, le pilote de script attend pour la période timeout définie. Lors du timeout, le script bloque l'exécution des opérations du même type qui peuvent ignorer les saisies d'opérateur ou ralentir les scripts périodiques. Utilisez cette valeur uniquement lorsque vous avez réellement besoin d'un timeout.</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">Ne spécifiez pas un long timeout si vous attendez que des données ne soient pas disponibles pour la lecture.</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">Pour plus d'informations sur les effets secondaires lors de l'utilisation d'un timeout, reportez-vous à la section 18.8.1, <a href="Script_Driver_Caution.htm">Points importants concernant le pilote de script</a>.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">int numOfBytes</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="tabletext" style="margin-bottom: 0;">Définit le nombre attendu d'octets dans le flux d'octets.</p>
+<p class="NoteImage"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Le montant maximum de données que vous pouvez lire est de 1024 octets. Pour lire plus de données, exécutez la méthode read de nouveau.</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">numOfBytes et le nombre d'éléments dans le tableau d'octets devraient correspondre. Si numOfBytes est plus grand, il se peut que vous lisiez plus de données pouvant être stockées.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">byte[] data</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="tabletext" style="margin-bottom: 0;">Zone de stockage du flux d'octets. Si vous lisez des données à partir du port série, elles sont stockés dans ce tableau d'octets.</p>
+<p class="NoteImage"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Lorsque vous référencez les données dans le tableau, n'oubliez pas que les références de tableau commencent à partir de 0.<br>
+Donc, pour lire le huitième octet dans le flux d'octets, utilisez data[7].</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<p style="font-weight: bold;">Valeur retournée</p>
+<p>Nombre d'octets reçus. La valeur (0) indique qu'une erreur est survenue.</p>
+<p class="NoteImage"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">La valeur retournée maximale est numOfBytes. Même si le buffer du pilote de script contient plus de données, numOfBytes le nombre maximum d'octets qui sont lus.<br>
+Par exemple, s'il y a 110 octets de données dans le buffer du pilote de script et numOfBytes est de 100 :</p>
+</li>
+</ul>
+<ul>
+<li class="p-NoteText2">
+<p class="NoteText2">lit 100 octets</p>
+</li>
+<li class="p-NoteText2">
+<p class="NoteText2">valeur retournée est de 100</p>
+</li>
+<li class="p-NoteText2">
+<p class="NoteText2">10 octets demeurent dans le buffer du pilote de script.</p>
+</li>
+</ul>
+<p class="NoteText" style="margin-left: 40px;">S'il y a 10 octets de données dans le buffer du pilote de script et numOfBytes est de 10 :</p>
+<ul>
+<li class="p-NoteText2">
+<p class="NoteText2">lit 10 octets</p>
+</li>
+<li class="p-NoteText2">
+<p class="NoteText2">valeur retournée est de 10</p>
+</li>
+<li class="p-NoteText2">
+<p class="NoteText2">0 octets demeurent dans le buffer du pilote de script.</p>
+</li>
+</ul>
+<p style="font-weight: bold;"><span style="font-weight: bold;">Commentaires</span></p>
+<p>Pour utiliser les méthodes read/write de pilote de script, vous devez tout d'abord configurer un pilote de script. Reportez-vous à la section 18.8.3, <a href="ScriptDriver_Setting_Up_the_Driver.htm">Configuration du pilote de script</a>.</p>
+</body>
+</html>

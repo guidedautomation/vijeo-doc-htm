@@ -1,0 +1,537 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="08 6, 2003 6:12:07 PM">
+<meta name="topic-status" content="In Progress">
+<meta name="topic-priority" content="0">
+<meta name="topic-time-estimate" content="0">
+<meta name="topic-comment" content="">
+<meta name="topic-id" content="17.3.9.2 String Methods">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>Méthodes String</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h3>18.9.2.2 M&eacute;thodes String</h3>
+<p>Vijeo-Designer prend en charge ces m&eacute;thodes de la classe String java.lang standard. Utilisez les m&eacute;thodes String pour comparer des cha&icirc;nes, retourner la longueur d'une cha&icirc;ne ou une cha&icirc;ne modifi&eacute;e, entre autres op&eacute;rations.</p>
+<p>Pour utiliser ces m&eacute;thodes, cr&eacute;ez une variable de type String et appelez la variable et la m&eacute;thode ainsi que tout autre param&egrave;tre.</p>
+<p class="code" style="margin-left: 40px;">String stringVar1; &nbsp;&nbsp;<span style="color: #008000;">// d&eacute;clarer la variable de cha&icirc;ne</span></p>
+<p class="code" style="margin-left: 40px;">boolean rv;</p>
+<p class="code" style="margin-left: 40px;">rv = stringVar1.startsWith(&quot;var&quot;); <span style="color: #008000;">// Appeler la m&eacute;thode et la variable String </p>
+<p class="code" style="margin-left: 40px; color: #008000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// V&eacute;rifier s'il commence par &quot;var&quot;</p>
+<p style="margin-top: 6pt;">Pour utiliser les m&eacute;thodes String avec une variable de type cha&icirc;ne depuis la liste des variables de Vijeo-Designer, obtenez la variable de type cha&icirc;ne Vijeo-Designer et affectez-la &agrave; une variable de script locale.</p>
+<p class="code" style="margin-left: 40px;">String s = VariableCha&icirc;ne.getStringValue();</p>
+<p>&nbsp;</p>
+<p>Certaines m&eacute;thodes de cha&icirc;ne n&eacute;cessitent que la variable de cha&icirc;ne soit initialis&eacute;e avant de l'utiliser.</p>
+<p class="Code" style="margin-left: 40px;">String str = &quot;&quot;; &nbsp;&nbsp;&nbsp;<span style="color: #008000;">// Initialiser la cha&icirc;ne avant de l'utiliser</span></p>
+<p class="Code" style="margin-left: 40px;">&nbsp;</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; 
+		 margin-left: 40px;" cellspacing="0" width="85.318%">
+	<col style="width: 35.163%;">
+	<col style="width: 64.837%;">
+	<tr>
+		<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 35.163%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;" bgcolor="#91AFD9"><p class="Tabletitle"><span  		 style="font-weight: bold;">M&eacute;thode</span></p></td>
+		<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; 
+			 width: 64.837%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9"><p 
+			 class="Tabletitle"><span style="font-weight: bold;">Description</span></p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">charAt(int index)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne le caract&egrave;re &agrave; l'index sp&eacute;cifi&eacute; de cette cha&icirc;ne (la num&eacute;rotation commence avec l'index 0).</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : entier</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : caract&egrave;re</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">compareTo(String str)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne une valeur &eacute;gale &agrave; 0 si la cha&icirc;ne est &eacute;gale, inf&eacute;rieure &agrave; 0 si la cha&icirc;ne est inf&eacute;rieure &agrave; l'argument, sup&eacute;rieure &agrave; 0 si la cha&icirc;ne est sup&eacute;rieure &agrave; l'argument (sensible &agrave; la casse).</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : Cha&icirc;ne</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : entier</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">concat(String str)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Concat&egrave;ne l'argument de la cha&icirc;ne &agrave; la fin de la cha&icirc;ne.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : Cha&icirc;ne</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">copyValueOf(char[ ] data)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne une cha&icirc;ne du tableau de caract&egrave;res.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : tableau de caract&egrave;res</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">copyValueOf(</p> <p class="TableDefinitions">char[ ] data,</p> <p class="TableDefinitions">int offset,</p> <p class="TableDefinitions">int count)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne une cha&icirc;ne du tableau de caract&egrave;res en sp&eacute;cifiant le d&eacute;calage initial et le nombre de caract&egrave;res.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre1 : tableau de caract&egrave;res</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre2 : entier</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre3 : entier</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">endsWith(String suffix)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la valeur Vrai si l'argument est un suffixe de la cha&icirc;ne. Retourne la valeur Faux dans les autres cas.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : Cha&icirc;ne</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : boolean</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">equals(Object anObject)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la valeur Vrai si l'argument n'est pas nul (cha&icirc;ne non vide) et si l'argument est une cha&icirc;ne comportant la m&ecirc;me s&eacute;quence de caract&egrave;res que cette cha&icirc;ne.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : Cha&icirc;ne</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : boolean</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">equalsIgnoreCase(String str)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la valeur Vrai si l'argument n'est pas nul et repr&eacute;sente la m&ecirc;me s&eacute;quence de caract&egrave;res que cette cha&icirc;ne sans tenir compte de la casse.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : Cha&icirc;ne</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : boolean</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">getBytes( )</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Convertit la cha&icirc;ne en octets selon l'encodage de caract&egrave;re par d&eacute;faut de la plate-forme et stocke le r&eacute;sultat dans un tableau d'octets.</p>
+		<p class="tabletext">retour : tableau d'octets</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">getChars(</p> <p class="TableDefinitions">int SrcBegin,</p> <p class="TableDefinitions">int SrcEnd,</p> <p class="TableDefinitions">char[ ] dest,</p> <p class="TableDefinitions">int dstBegin)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Copie les caract&egrave;res &agrave; partir de la cha&icirc;ne vers le tableau de caract&egrave;res de destination.</p>
+		<p class="tabletext">Le premier caract&egrave;re &agrave; copier est &agrave; l'index srcBegin, le dernier caract&egrave;re &agrave; l'index SrcEnd moins 1. Les caract&egrave;res sont copi&eacute;s dans le tableau de caract&egrave;res de destination, commen&ccedil;ant &agrave; l'index dstBegin.</p>
+		<p class="tabletext">param&egrave;tre1 : entier</p>
+		<p class="tabletext">param&egrave;tre2 : entier</p>
+		<p class="tabletext">param&egrave;tre3 : tableau de caract&egrave;res</p>
+		<p class="tabletext">param&egrave;tre4 : entier</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">hashCode( )</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne un code hach&eacute; pour cette cha&icirc;ne.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : aucun</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : entier</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">indexOf(int ch)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la position de l'index dans cette cha&icirc;ne de la premi&egrave;re occurrence du caract&egrave;re sp&eacute;cifi&eacute;, ou - 1 si le caract&egrave;re n'appara&icirc;t pas.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : caract&egrave;re</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : entier</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">indexOf(int ch,<br> int fromIndex)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la position de l'index dans cette cha&icirc;ne de la premi&egrave;re occurrence du caract&egrave;re sp&eacute;cifi&eacute;, &agrave; partir de la position d&eacute;finie de l'index, ou - 1 si le caract&egrave;re n'appara&icirc;t pas.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre1 : caract&egrave;re</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre2 : entier</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : entier</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">indexOf(String str)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la position de l'index dans cette cha&icirc;ne de la premi&egrave;re occurrence de la sous cha&icirc;ne.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : Cha&icirc;ne</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : entier</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">indexOf(String str,<br> int fromIndex)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la position de l'index dans cette cha&icirc;ne de la premi&egrave;re occurrence de la sous cha&icirc;ne en commen&ccedil;ant par la position d'index d&eacute;finie.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre1 : Cha&icirc;ne</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre2 : entier</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : entier</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">intern( )</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne une repr&eacute;sentation canonique pour l'objet de type cha&icirc;ne.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : aucun</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">lastIndexOf(int ch)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne l'index dans cette cha&icirc;ne de la derni&egrave;re occurrence du caract&egrave;re sp&eacute;cifi&eacute;.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre1 : entier</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre2 : entier</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : entier</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">lastIndexOf(int ch,<br> int fromIndex)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne l'index dans cette cha&icirc;ne de la derni&egrave;re occurrence du caract&egrave;re sp&eacute;cifi&eacute;, en commen&ccedil;ant par la fin depuis l'index sp&eacute;cifi&eacute;.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre1 : entier</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre2 : entier</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : entier</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">lastIndexOf(String str)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne l'index dans cette cha&icirc;ne de la derni&egrave;re occurrence de la sous cha&icirc;ne sp&eacute;cifi&eacute;.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : Cha&icirc;ne</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : entier</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">lastIndexOf(String str,<br> int fromIndex)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne l'index dans cette cha&icirc;ne de la derni&egrave;re occurrence de sous cha&icirc;ne sp&eacute;cifi&eacute;e, en commen&ccedil;ant par la fin depuis l'index sp&eacute;cifi&eacute;.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre1 : Cha&icirc;ne</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre2 : entier</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : entier</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">length( )</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la longueur de cette cha&icirc;ne.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : aucun</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : entier</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">regionMatches(boolean ignoreCase,<br> int toffset,<br> String other,<br> int ooffset,<br> int len)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la valeur Vrai si les deux parties compar&eacute;es de la cha&icirc;ne sont &eacute;gales.</p>
+		<p class="tabletext">toffset d&eacute;finit le d&eacute;calage de d&eacute;but de cette cha&icirc;ne, ooffset d&eacute;finit le d&eacute;calage de d&eacute;but de l'argument de cha&icirc;ne, et len d&eacute;finit le nombre de caract&egrave;res &agrave; comparer.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre1 : bool&eacute;en<br> param&egrave;tre2 : entier <br> param&egrave;tre3 : cha&icirc;ne<br> param&egrave;tre4 : entier <br> param&egrave;tre5 : entier<br> retour : boolean</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">regionMatches(int toffset,<br> String other,<br> int ooffset,<br> int len)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la valeur Vrai si les deux parties compar&eacute;es de la cha&icirc;ne sont exactement identiques.</p>
+		<p class="tabletext">toffset d&eacute;finit le d&eacute;calage de d&eacute;but de cette cha&icirc;ne, ooffset d&eacute;finit le d&eacute;calage de d&eacute;but de l'argument de cha&icirc;ne, et len d&eacute;finit le nombre de caract&egrave;res &agrave; comparer.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre1 : entier</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre2 : cha&icirc;ne<br> param&egrave;tre3 : entier <br> param&egrave;tre4 : entier<br> retour : boolean</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">replace(char oldChar,<br> char newChar)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne une nouvelle cha&icirc;ne r&eacute;sultant du remplacement de toutes les occurrences de oldChar dans cette cha&icirc;ne par newChar.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre1 : caract&egrave;re<br> param&egrave;tre2 : caract&egrave;re<br> retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">startsWith(String prefix)</p>
+		<p class="TableDefinitions">&nbsp;</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la valeur Vrai si cette cha&icirc;ne commence par le pr&eacute;fixe sp&eacute;cifi&eacute;.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : Cha&icirc;ne<br>retour : boolean</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">startsWith(String prefix,<br> int toffset)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la valeur Vrai si cette cha&icirc;ne commence par le pr&eacute;fixe sp&eacute;cifi&eacute;, depuis le d&eacute;calage.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre1 : cha&icirc;ne<br> param&egrave;tre2 : entier<br> retour : boolean</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">substring(int beginIndex)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne une nouvelle cha&icirc;ne qui commence &agrave; l'index sp&eacute;cifi&eacute; &agrave; la fin de cette cha&icirc;ne.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : entier</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">substring(int beginIndex,<br> int endIndex)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne une nouvelle cha&icirc;ne qui commence et se termine aux index sp&eacute;cifi&eacute;s.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre1 : entier<br> param&egrave;tre2 : entier<br> retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">toCharArray( )</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne un tableau de caract&egrave;res de cette cha&icirc;ne.</p>
+		<p class="tabletext">param&egrave;tre : aucun</p>
+		<p class="tabletext">retour : tableau de caract&egrave;res</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">toLowerCase( )</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Convertit cette cha&icirc;ne en caract&egrave;res minuscules.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : aucun</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">toString( )</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne cette cha&icirc;ne.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : aucun</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">toUpperCase( )</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Convertit cette cha&icirc;ne en caract&egrave;res majuscules.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : aucun</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">trim( )</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Supprime les espaces blancs aux extr&eacute;mit&eacute;s de cette cha&icirc;ne.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : aucun</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">valueOf(boolean b)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la repr&eacute;sentation de la cha&icirc;ne de l'argument bool&eacute;en.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : boolean</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">valueOf(char c)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la repr&eacute;sentation de la cha&icirc;ne de l'argument caract&egrave;re.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : caract&egrave;re</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">valueOf(char[] c)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la repr&eacute;sentation de la cha&icirc;ne de l'argument tableau de caract&egrave;res.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : caract&egrave;re</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">valueOf(double d)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la repr&eacute;sentation de la cha&icirc;ne de l'argument double.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : double</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">valueOf(float f)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la repr&eacute;sentation de la cha&icirc;ne de l'argument flottant.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : float</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">valueOf(int i)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la repr&eacute;sentation de la cha&icirc;ne de l'argument entier.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : entier</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">valueOf(long l)</p></td>
+		<td style="border-bottom: Solid 1px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la repr&eacute;sentation de la cha&icirc;ne de l'argument long.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : long</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+	<tr>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; 
+			 width: 35.163%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; 
+			 padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED"><p 
+			 class="TableDefinitions">valueOf(Object obj)</p></td>
+		<td style="border-bottom: Solid 3px #000000; width: 64.837%; vertical-align: TOP; 
+			 padding-left: 10px; padding-right: 10px; padding-top: 10px; 
+			 padding-bottom: 10px;"><p class="tabletext">Retourne la repr&eacute;sentation de la cha&icirc;ne de l'argument objet.</p>
+		<p class="tabletext" style="margin-bottom: 0;">param&egrave;tre : Objet</p>
+		<p class="tabletext" style="margin-bottom: 0;">retour : Cha&icirc;ne</p></td>
+	</tr>
+</table>
+<p>Pour plus d'informations sur les m&eacute;thodes mentionn&eacute;es ci-dessus, consultez la documentation Java standard.</p>
+</body>
+</html>

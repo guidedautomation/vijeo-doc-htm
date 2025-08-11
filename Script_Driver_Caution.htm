@@ -1,0 +1,120 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="topic-status" content="In Progress">
+<meta name="topic-priority" content="0">
+<meta name="topic-time-estimate" content="0">
+<meta name="topic-comment" content="">
+<meta name="topic-id" content="Script Driver Caution">
+<meta name="window-type" content="$global_NewWindow">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>Points importants concernant le pilote de script</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+<h2>18.8.1 Points importants concernant le pilote de script</h2>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Taille du buffer de lecture</h4>
+<p>Lorsque vous utilisez le pilote de script pour lire des donn&eacute;es depuis d&apos;autres &eacute;quipements, vous pouvez pr&eacute;ciser le nombre d&apos;octets &agrave; lire jusqu&apos;&agrave; un maximum de 1024. Le maximum de 1024 correspond &agrave; la capacit&eacute; de stockage du buffer du pilote de script.</p>
+<p>Pour lire plus de 1024 octets de donn&eacute;es ex&eacute;cutez des op&eacute;rations de lecture multiples.</p>
+<p><img src="Vijeo_ScriptDriverStructure.bmp" style="border: none;" alt="" width="303" height="277" border="0"></p>
+<p class="NoteImage"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Il y a deux buffers qui fonctionnent avec les communications du pilote de script : le buffer du pilote de script et le buffer du port s&eacute;rie. Le buffer du port s&eacute;rie peut contenir jusqu&apos;&agrave; 4096 octets. Si l&apos;&eacute;quipement envoie plus de 4096 octets de donn&eacute;es et ces donn&eacute;es ne sont pas lues, le buffer du port s&eacute;rie d&eacute;bordera et les donn&eacute;es seront perdues.</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">Le montant maximum de donn&eacute;es que vous pouvez &eacute;crire &agrave; la fois est de 1024 octets.</p>
+</li>
+</ul>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Les op&eacute;rations de lecture/d&apos;&eacute;criture n&eacute;cessitent un d&eacute;lai d&apos;attente</h4>
+<p>Lorsque vous voulez lire des donn&eacute;es &agrave; partir d&apos;un &eacute;quipement vous devez g&eacute;n&eacute;ralement envoyer une requ&ecirc;te  &agrave; l&apos;aide de la m&eacute;thode <a href="Scripts.chm::/Serial_write.htm">write</a>. Apr&egrave;s avoir envoy&eacute; la requ&ecirc;te, il y a un d&eacute;lai avant que l&apos;&eacute;quipement envoie une r&eacute;ponse. Pour lire les donn&eacute;es envoy&eacute;es par l&apos;&eacute;quipement, votre script doit inclure un d&eacute;lai d&apos;attente pour tenir compte ce d&eacute;lai.</p>
+<p>Reportez-vous &agrave; l&apos;exemple suivant.</p><p class="Code" style="margin-bottom: 0pt; margin-left: 40px;">ScriptDriver.write(<span style="color: #0000ff;">true</span>, 8, SendPacket);</p><p class="Code" style="margin-bottom: 0pt; margin-left: 40px;">ScriptDriver.read(<span style="font-weight: bold;">100</span>, 7, RecvPacket); &nbsp;<span style="color: #008000;">// D&eacute;lai d&apos;attente 100ms</span></p>
+<p>&nbsp;</p>
+<p>Apr&egrave;s avoir envoy&eacute; la commande d&apos;&eacute;criture, le script ex&eacute;cute la commande de lecture imm&eacute;diatement. Cependant, &agrave; ce moment l&apos;&eacute;quipement n&apos;a toujours pas r&eacute;pondu, et la commande de lecture attend pour les donn&eacute;es.</p>
+<p>Lorsque les donn&eacute;es sont d&eacute;finitivement re&ccedil;ues, la commande de lecture se termine et continue avec le restant du script.</p>
+<p>Si aucune donn&eacute;e n&apos;est re&ccedil;ue, la commande de lecture attend pour que le d&eacute;lai d&apos;attente s&apos;&eacute;coule avant de continuer avec le restant du script. Au cours de cette p&eacute;riode d&apos;attente (d&eacute;lai d&apos;attente), le script bloquera l&apos;ex&eacute;cution d&apos;autres op&eacute;rations.</p>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Blocage lors de la lecture avec un d&eacute;lai d&apos;attente</h4>
+<p>Dans la plupart des cas, lorsque les op&eacute;rations sont normales, le d&eacute;lai d&apos;attente ne touchera pas votre application. Dans des op&eacute;rations normales, l&apos;&eacute;quipement envoie des r&eacute;ponses rapidement, normalement dans les 100 ms pour la plupart des applications qui travaillent avec de faibles quantit&eacute;s de donn&eacute;es (100 octets ou moins). Le d&eacute;lai d&apos;attente se pr&eacute;sente dans des op&eacute;rations anormales, comme lors d&apos;un &eacute;chec de l&apos;&eacute;quipement, et lorsqu&apos;il n&apos;existe aucune donn&eacute;e &agrave; lire sur le port s&eacute;rie.</p>
+<p>Pour la dur&eacute;e du d&eacute;lai d&apos;attente, le script bloquera l&apos;ex&eacute;cution d&apos;autres op&eacute;rations. Les cons&eacute;quences du blocage sont diff&eacute;rents pour chaque type de script.</p>
+<h5>Effets lors de l&apos;utilisation d&apos;un d&eacute;lai d&apos;attente</h5>
+<p>Ce qui suit d&eacute;crit des cons&eacute;quences non d&eacute;sir&eacute;es qui se pr&eacute;sentent pour des types diff&eacute;rents de scripts qui utilisent un d&eacute;lai d&apos;attente <span style="font-style: italic;">et</span> lorsqu&apos;il n y a aucune donn&eacute;e &agrave; lire depuis le port s&eacute;rie. Utilisez le d&eacute;lai d&apos;attente d&apos;une mani&egrave;re contr&ocirc;l&eacute;e, limitez l&apos;usage, et testez les op&eacute;rations au complet lors du runtime.</p>
+<ul>
+<li class="p-Bullet">
+<p class="Bullet">Les <span style="font-weight: bold;"><a name="Conditional" id="Conditional"></a>actions conditionnelles ou les scripts d&apos;&eacute;cran</span> peuvent donner l&apos;impression que l&apos;&eacute;cran est fig&eacute;. L&apos;utilisation d&apos;un d&eacute;lai d&apos;attente avec ce type de script arr&ecirc;te la communication, arr&ecirc;te la mise &agrave; jour des valeurs de variable, et arr&ecirc;te le dessin et l&apos;animation.</p>
+</li>
+<li class="p-Bullet">
+<p class="Bullet">Les <span style="font-weight: bold;">scripts A l&apos;ouverture/A la fermeture de l&apos;&eacute;cran</span> produisent le m&ecirc;me probl&egrave;me que les scripts conditionnels.</p>
+</li>
+<li class="p-Bullet">
+<p class="Bullet">Les <span style="font-weight: bold;">scripts d&apos;alarme</span> produisent le m&ecirc;me probl&egrave;me que les actions conditionnelles ou les scripts d&apos;&eacute;cran.</p>
+</li>
+<li class="p-Bullet">
+<p class="Bullet">Les <span style="font-weight: bold;">scripts sur appui</span> (Action: D&eacute;clenchement = &eacute;cran A l&apos;appui, script de commutateur, script d&apos;animation sur appui, script de touche de fonction, script d&apos;action sur appui d&apos;alarme) arr&ecirc;tent de s&apos;ex&eacute;cuter pour la dur&eacute;e du d&eacute;lai d&apos;attente. Les op&eacute;rations sur appui sont stock&eacute;es dans une file d&apos;attente qui peut tenir jusqu&apos;&agrave; cinquante actions d&apos;appui. Une fois que le d&eacute;lai d&apos;attente est &eacute;coul&eacute;, ces op&eacute;rations sur appui en attente sont ex&eacute;cut&eacute;es. D&apos;autres op&eacute;rations telles que la communication et le dessin ne sont pas affect&eacute;es.</p>
+</li>
+</ul>
+<p class="NoteImage" style="margin-left: 0px;"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">L&apos;utilisation de d&eacute;lais d&apos;attente plus longs pourrait s&apos;av&eacute;rer dangereux puisque l&apos;op&eacute;rateur de l&apos;&eacute;cran ne peut pas r&eacute;pondre aux alarmes ni s&apos;occuper d&apos;autres &eacute;v&eacute;nements pendant le d&eacute;lai d&apos;attente.</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">Le d&eacute;lai d&apos;attente maximum recommand&eacute; est une seconde (1000 ms).</p>
+</li>
+</ul>
+<h5>Utiliser les d&eacute;lais d&apos;attente en toute s&eacute;curit&eacute;</h5>
+<p>Vous pouvez utiliser les d&eacute;lais d&apos;attente en toute avec les actions Au d&eacute;marrage et P&eacute;riodique ayant une fr&eacute;quence unique. Il existe des effets secondaires lors de l&apos;utilisation d&apos;un d&eacute;lai d&apos;attente avec ces actions, mais l&apos;impact est probablement minimal, selon vos exigences de Runtime.</p>
+<ul>
+<li class="p-Bullet">
+<p class="Bullet">Les <span style="font-weight: bold;">actions Au d&eacute;marrage</span> augmentent la dur&eacute;e exig&eacute;e pour lancer et d&eacute;marrer l&apos;application Runtime sur la machine cible et retarder les communications avec les &eacute;quipements pour la dur&eacute;e du d&eacute;lai d&apos;attente. Si un d&eacute;lai lors du d&eacute;marrage ne touchent pas les op&eacute;rations de fa&ccedil;on n&eacute;gative, vous pouvez utiliser le d&eacute;lai d&apos;attente en toute.</p>
+</li>
+<li class="p-Bullet">
+<p class="Bullet">Les <span style="font-weight: bold;">actions p&eacute;riodiques ou les scripts d&apos;&eacute;cran</span> bloquent d&apos;autres actions p&eacute;riodiques ou scripts d&apos;&eacute;cran configur&eacute;s <span style="font-style: italic;">avec la m&ecirc;me fr&eacute;quence</span>. Si vous utilisez une valeur unique pour la fr&eacute;quence, cet effet peut devenir n&eacute;gligeable. Toutefois, si vous utilisez des valeurs uniques, cela peut produire une charge plus &eacute;lev&eacute;e lorsque plus d&apos;unit&eacute;s d&apos;ex&eacute;cution sont cr&eacute;&eacute;es. Equilibrez vos besoins pour les cha&icirc;nes uniques avec la capacit&eacute; de charge de runtime.</p>
+</li>
+</ul>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Blocage lors de l&apos;&eacute;criture</h4>
+<p>Lorsque vous utilisez la m&eacute;thode d&apos;&eacute;criture pour envoyer des quantit&eacute;s importantes de donn&eacute;es, toutes les op&eacute;rations sur la machine cible sont bloqu&eacute;es jusqu&apos;&agrave; ce que l&apos;op&eacute;ration d&apos;&eacute;criture soit termin&eacute;e.</p>
+<p>Pour minimiser l&apos;impact des op&eacute;rations d&apos;&eacute;criture, nous vous recommandons de r&eacute;partir les donn&eacute;es en segments plus petits, comme 100 octets, pour chaque op&eacute;ration d&apos;&eacute;criture.</p>
+<p class="NoteImage"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">La m&eacute;thode d&apos;&eacute;criture du pilote de script bloque TOUTES les op&eacute;rations sur la machine cible jusqu&apos;&agrave; ce que l&apos;op&eacute;ration d&apos;&eacute;criture soit termin&eacute;e. Essayez de configurer des applications pour que vous ne deviez pas &eacute;crire des quantit&eacute;s importantes de donn&eacute;es au m&ecirc;me moment.</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">Lors de l&apos;&eacute;criture de la quantit&eacute; maximum de 1 024 octets ayant une vitesse de transmission de 19 200 bps, la machine cible ne r&eacute;pond plus pendant 2 &agrave; 3 secondes.</p>
+</li>
+</ul>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Validation</h4>
+<p>La validation de l&apos;application utilisateur avant la mise en production fait partie du cycle de d&eacute;veloppement. Toutefois, faites attention lorsque vous cr&eacute;ez des applications utilisant le pilote de script.</p>
+</body>
+</html>

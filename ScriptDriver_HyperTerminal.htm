@@ -1,0 +1,114 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>Exemple : Lecture de messages depuis un HyperTerminal</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h2>18.8.6 Exemple : Lecture de messages depuis un HyperTerminal</h2>
+<p>Dans l'exemple suivant, la machine cible reçoit et affiche des messages à partir d'un hyperterminal.</p>
+<p class="Image"><img src="ScriptDriver_Hyperterminal.bmp" style="border: none;" alt="" width="294" height="129" border="0"></p>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Opérations préalables à l'écriture du script</h4>
+<ol style="list-style: decimal;">
+<li style="font-weight: normal;" class="p">
+<p style="font-weight: normal;">Ajoutez le pilote de script et renommez-le <span style="font-weight: bold;">HyperTerminal</span>.<br>
+Reportez-vous à la section 18.8.3, <a href="ScriptDriver_Setting_Up_the_Driver.htm">Configuration du pilote de script</a>.</p>
+</li>
+<li style="font-weight: normal;" class="p">
+<p style="font-weight: normal;">Connectez l'hyperterminal sur le port COM défini.<br>
+Reportez-vous à la section 18.8.4, <a href="ScriptDriver_Cable_Connections.htm">Connexions de câble</a>.</p>
+</li>
+</ol>
+<h4><img src="Square.bmp" style="border: none;" alt="" width="12" height="10" border="0">Ecriture du script</h4>
+<ol style="list-style: decimal;">
+<li style="font-weight: normal;" class="p">
+<p style="font-weight: normal;">Créez une variable de chaîne, renommez-la <span style="font-weight: bold;">ReadText</span>, et dans la propriété Nombre d'octets, définissez le nombre de caractères qu'elle peut stocker.<br>
+Cette variable sera utilisée pour stocker et afficher le texte provenant d'un hyperterminal.</p>
+</li>
+</ol>
+<ol start="2" style="list-style: decimal;">
+<li style="font-weight: normal;" class="p">
+<p style="font-weight: normal;">Créez un objet Affichage de chaîne, affectez la variable STRING nouvellement créée, et faites correspondre le paramètre Longueur affichée au paramètre Nombre d'octets de la variable.</p>
+</li>
+</ol>
+<p class="Image" style="margin-left: 40px;"><img src="ScriptDriver_Draw_StringDisplay.bmp" style="border: none;" alt="" width="494" height="146" border="0"></p>
+<ol start="3" style="list-style: decimal;">
+<li style="font-weight: normal;" class="p">
+<p style="font-weight: normal;">Créez un script d'action disposant des propriétés suivantes :<br>
+Type de déclenchement : Périodique<br>
+Fréquence : 2.5<br>
+Planification : Normal</p>
+</li>
+</ol>
+<ol start="4" style="list-style: decimal;">
+<li class="p">
+<p>Ecrivez le script.</p>
+</li>
+</ol>
+<p class="Code" style="margin-left: 40px; color: #008000;">// 1. Créer des variables de script</p>
+<p class="Code" style="margin-left: 40px; color: #008000;">// Pour la Lecture de messages depuis un hyperterminal</p>
+
+<p class="Code" style="margin-left: 40px;">int result;</p>
+
+<p class="Code" style="margin-left: 40px;">byte readArray[]= new byte[20];</p>
+
+<p class="Code" style="margin-left: 40px;">&#160;</p>
+<p class="Code" style="margin-left: 40px; color: #008000;">// 2. Lire les données depuis le port série</p>
+
+<p class="Code" style="margin-left: 40px;">result = HyperTerminal.read(0, 20, readArray);</p>
+
+<p class="Code" style="margin-left: 40px;">if (result &lt;= 0) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #008000;">// Rechercher des erreurs</span></p>
+<p class="Code" style="margin-left: 80px;">ReadText.write("ERROR"); <span style="color: #008000;">// Ecrire vers la variable</span></p>
+
+<p class="Code" style="margin-left: 40px;">else</p>
+
+<p class="Code" style="margin-left: 40px;">{</p>
+<p class="Code" style="margin-left: 80px; color: #008000;">// Convertir le tableau d'octets en une chaîne</p>
+
+<p class="Code" style="margin-left: 80px;">String temp = new String( readArray );</p>
+
+<p class="Code" style="margin-left: 80px;">ReadText.write(temp);</p>
+
+<p class="Code" style="margin-left: 40px;">}</p>
+<p class="Code" style="margin-left: 40px; color: #008000;">&#160;</p>
+<h5>1. Créer des variables de script</h5>
+<p>Créez des variables de script locales pour travailler avec le message reçu de l'hyperterminal.</p>
+<h5>2. Lire les données depuis le port série</h5>
+<p>Vérifiez le port série pour toute donnée reçue de l'hyperterminal. Si le résultat de lecture est inférieur à 0, une erreur s'est produite et vous devez écrire "ERROR" dans la variable de chaîne.</p>
+<p>Si le résultat de lecture est supérieur à 0, des données ont été reçues. Convertissez le tableau d'octets en une chaîne et écrivez le résultat dans la variable de chaîne.</p>
+</body>
+</html>

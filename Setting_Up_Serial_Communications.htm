@@ -1,0 +1,101 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="09 2, 2003 5:32:39 PM">
+<meta name="topic-status" content="In Progress">
+<meta name="topic-priority" content="0">
+<meta name="topic-time-estimate" content="0">
+<meta name="topic-comment" content="">
+<meta name="topic-id" content="">
+<meta name="window-type" content="$global_NewWindow">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>Exemple : envoi de messages vers un affichage de texte</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" background="top_banner.bmp" 
+			 width="100%">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" alt="" style="border: none;" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a  			 title="Glossaire" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" alt="" style="border: none;" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a  			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Accueil"><img src="logo_home.bmp" alt="Accueil" title="Accueil" style="border: none;  			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+<h2>18.8.5 Exemple : envoi de messages vers un affichage de texte</h2>
+<p>A l'aide du pilote de script et des m&eacute;thodes <a  	 href="Serial_read.htm">read</a> et <a  	 href="Serial_write.htm">write</a>, vous pouvez communiquer avec pratiquement tout p&eacute;riph&eacute;rique s&eacute;rie.</p>
+<p>Dans l'exemple suivant, une alarme est d&eacute;clench&eacute;e et s'affiche sur la machine cible. La machine cible envoie &eacute;galement le message d'alarme vers un affichage de texte marquise pour que tout le monde dans l'atelier puisse visualiser l'alarme.</p>
+<p class="Image"><img src="Marquee_Display.bmp" alt="" style="border: none;" width="505" height="200" border="0"></p>
+<h4><img src="Square.bmp" alt="" style="border: none;" width="12" height="10" border="0">Op&eacute;rations pr&eacute;alables &agrave; l'&eacute;criture du script</h4>
+<ol style="list-style: decimal;">
+	<li class="p" style="font-weight: normal;"><p style="font-weight: normal;">Ajoutez le pilote de script et renommez-le <span  	 style="font-weight: bold;">Text_Display</span>.<br> Reportez-vous &agrave; la section 18.8.3, <a href="ScriptDriver_Setting_Up_the_Driver.htm">Configuration du pilote de script</a>.</p></li>
+	<li class="p" style="font-weight: normal;"><p style="font-weight: normal;">Connectez l'&eacute;quipement au port COM d&eacute;fini.<br> Reportez-vous &agrave; la section 18.8.4, <a href="ScriptDriver_Cable_Connections.htm">Connexions de c&acirc;ble</a>.</p></li>
+</ol>
+<h4><img src="Square.bmp" alt="" style="border: none;" width="12" height="10" border="0">Ecriture du script</h4>
+<ol style="list-style: decimal;">
+	<li class="p" style="font-weight: normal;"><p style="font-weight: normal;"><span  	 style="font-weight: normal;">Dans les propri&eacute;t&eacute;s d'alarme de la variable, cliquez sur Action sur d&eacute;clenchement, puis ajouter la fonction de script pour faire afficher l'&eacute;diteur de scripts.</span></p></li>
+</ol>
+<p class="Image" style="margin-left: 40px;"><img src="Serial_SetUp_ActionScript.bmp" alt="" style="border: none;" width="691" height="208" border="0"></p>
+<ol start="2" style="list-style: decimal;">
+	<li class="p"><p>Ecrivez le script pour envoyer un message d'alarme vers le port COM, et enfin vers l'affichage de texte.</p></li>
+</ol>
+<p class="Code" style="margin-left: 40px; color: #008000;">// 1. Cr&eacute;er des variables de script</p>
+<p class="Code" style="margin-left: 40px; color: #008000;">// Pour travailler avec le message d'alarme et la longueur du message</p>
+<p class="Code" style="margin-left: 40px;">char[] sendToDisplayTMP;  <span style="color: #008000;">// tableau de caract&egrave;res temporaire </p>
+<p class="Code" style="margin-left: 40px;">byte sendToDisplay[]; &nbsp;&nbsp;&nbsp;<span style="color: #008000;">// tableau d'octet pour l'op&eacute;ration d'&eacute;criture</span></p>
+<p class="Code" style="margin-left: 40px;">int numOfChar = 0, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  	 style="color: #008000;">// longueur de la cha&icirc;ne</span></p>
+<p class="Code" style="margin-left: 80px;">i, j;</p>
+<p class="Code" style="margin-left: 40px;">&nbsp;</p>
+<p class="Code" style="margin-left: 40px; color: #008000;"><span style="color: #008000;">// message d'alarme</span></p>
+<p class="Code" style="margin-left: 40px;">String alarmMsg = &quot;Situation d'urgence FEU Zone 12&quot;;</p>
+<p class="Code" style="margin-left: 40px;">&nbsp;</p>
+<p class="Code" style="margin-left: 40px; color: #008000;">// 2. Calculer la longueur du message d'alarme</p>
+<p class="Code" style="margin-left: 40px;">numOfChar = alarmMsg.length();</p> <p class="Code" style="margin-left: 40px;">sendToDisplay = new byte[numOfChar];</p>
+<p class="Code" style="margin-left: 40px;">&nbsp;</p>
+<p class="Code" style="margin-left: 40px; color: #008000;">// 3. Convertir le message d'alarme UNICODE en octets ASCII</p>
+<p class="Code" style="margin-left: 40px;">sendToDisplayTMP =&nbsp;alarmMsg.toCharArray();</p> <p class="Code" style="margin-left: 40px;">for (i = 0; i &lt; numOfChar; i++)</p> <p class="Code" style="margin-left: 40px;">{</p> <p class="Code" style="margin-left: 80px;">sendToDisplay[i] = (byte)sendToDisplayTMP[i];</p> <p class="Code" style="margin-left: 40px;">}</p>
+<p class="Code" style="margin-left: 40px;">&nbsp;</p>
+<p class="Code" style="margin-left: 40px; color: #008000;"><span style="color: #008000;">// 4. Envoyer le message</span></p>
+<p class="Code" style="margin-left: 40px;">Text_Display.write(true, numOfChar, sendToDisplay);</p>
+<p class="Code" style="margin-left: 40px; color: #008000;">&nbsp;</p>
+<h5>1. Cr&eacute;er des variables de script</h5>
+<p>Cr&eacute;ez des variables de script locales pour travailler avec le message d'alarme. Le tableau de caract&egrave;res et d'octets stockera le message d'alarme et la longueur du message d'alarme. Les variables de type entier diverses sont exig&eacute;es pour le stockage temporaire pour les valeurs.</p>
+<p>La ligne suivante est le message d'alarme que nous voulons afficher dans l'affichage de texte marquise.</p>
+<h5>2. Calculer la longueur du message d'alarme</h5>
+<p>Obtenez le nombre de caract&egrave;res dans le message d'alarme et cr&eacute;ez un tableau d'octets de la m&ecirc;me taille. Remarquez que les cha&icirc;nes et les caract&egrave;res dans Vijeo-Designer utilisent les caract&egrave;res UNICODE. Le tableau d'octets stockera le message d'alarme r&eacute;el envoy&eacute; &agrave; l'affichage de texte.</p>
+<h5>3. Convertir le message d'alarme UNICODE en octets ASCII</h5>
+<p>Convertissez chaque caract&egrave;re UNICODE dans le tableau de caract&egrave;res et affectez-les aux &eacute;l&eacute;ments correspondants dans le tableau d'octets. Chacun de ces octets &eacute;quivaut un caract&egrave;re ASCII.</p>
+<p class="NoteImage"><img src="Note_Moji.bmp" alt="" style="border: none;" width="51" height="25" border="0"></p>
+<ul>
+	<li class="p-NoteText"><p class="NoteText">Cet exemple consid&egrave;re que l'affichage de texte ne prend en charge que les caract&egrave;res ASCII.</p></li>
+</ul>
+<h5>4. Envoyer le message</h5>
+<p>Enfin, envoyez le message vers le port s&eacute;rie.</p>
+<p>Lors du runtime, lorsque l'alarme est d&eacute;clench&eacute;e, le script produit le message &laquo;Emergency FIRE Zone 12&raquo; sur COM1. Un affichage marquise est connect&eacute; sur COM1, qui affiche ensuite le message.</p>
+<p class="NoteImage"><img src="Note_Moji.bmp" alt="" style="border: none;" width="51" height="25" border="0"></p>
+<ul>
+	<li class="p-NoteText"><p class="NoteText">Vous ne pouvez pas envoyer une cha&icirc;ne directement au pilote de script. Convertissez tout d'abord la cha&icirc;ne en un tableau d'octets.</p></li>
+	<li class="p-NoteText"><p class="NoteText">Si votre &eacute;quipement s&eacute;rie n&eacute;cessite les caract&egrave;res de contr&ocirc;le de d&eacute;part et de fin, ajoutez-les au tableau d'octets.</p></li>
+	<li class="p-NoteText"><p class="NoteText">Si vous &eacute;crivez vers une imprimante ou vers d'autres &eacute;quipements s&eacute;rie, vous pouvez &eacute;galement envoyer les caract&egrave;res de contr&ocirc;le dans un tableau d'octets. Par exemple, retour de chariot, gras, nouvelle page.</p></li>
+</ul>
+</body>
+</html>
