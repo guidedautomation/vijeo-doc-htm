@@ -1,0 +1,344 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta name="template" content="Vijeo_template.htt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="date" content="08 9, 2003 3:17:34 PM">
+ <meta name="generator" content="Adobe RoboHelp 10">
+<title>write</title>
+<link rel="StyleSheet" href="TIS-STYL.CSS" type="text/css">
+<style type="text/css">
+/*<![CDATA[*/
+td ol,
+td ul {
+        margin-top: 0;
+        margin-bottom: 0;
+}
+/*]]>*/
+</style>
+</head>
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table style="background-attachment: scroll; margin-left: 0px; margin-right: 4px; 
+			 background-image: url(top_banner.bmp); background-repeat: Repeat-X; 
+			 line-height: 0pt; vertical-align: top;" cellspacing="0" width="100%" 
+			 background="top_banner.bmp">
+		<col style="width: 90%;">
+		<col style="width: 5%;">
+		<col style="width: 5%;">
+		<tr style="vertical-align: center; height: 39px;">
+			<td style="width: 90%; padding-right: 10px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p><img src="logo.bmp" style="border: none;" alt="" width="37" height="37" border="0"></p></td>
+			<td style="width: 5%; padding-right: 0px; padding-left: 10px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 title="Glossary" href="Appendix.chm::/Glossary.htm"><img src="logo_glossary.bmp" style="border: none;" alt="" width="47" height="37" border="0"></a></p></td>
+			<td style="width: 5%; padding-right: 10px; padding-left: 5px; 
+				 border-right-color: #000000;">
+   <p style="text-align: center;"><a 
+			 href="About.chm::/What_is_Vijeo-Designer.htm" title="Home"><img src="logo_home.bmp" alt="Home" title="Home" style="border: none; 
+			 margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: -2px;" width="47" height="37" border="0"></a></p></td>
+		</tr>
+	</table>
+</div>
+
+<h4>write</h4>
+
+<p style="font-weight: bold;">Fonction</p>
+<p>Permet au script d'interagir avec les variables Vijeo-Designer.</p>
+<p class="NoteImage"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Avant d'utiliser les variables externes, vous devrez vérifier l'intégrité des données (<a href="Variable_isGood.htm">isDataQualityGood</a>).</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">Lorsque vous utilisez cette méthode de script pour écrire vers la même variable externe à plusieurs reprises de façon consécutive dans un très court délai (de moins de 1 seconde), certaines opérations d'écriture peuvent être supprimées afin d'optimiser l'efficacité de la communication. L'opération d'écriture finale est toujours effectuée.</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">Si chaque opération d'écriture vers la variable externe est exigée afin que l'équipement s'exécute correctement, utilisez les opérations d'écriture Bit et Mot disponibles dans les commutateurs, les affichages de texte et de message, les courbes à barre et de compteur, les sélecteurs, les touches de fonction, l'animation sur appui, et les actions d'alarme de variable.</p>
+</li>
+</ul>
+<p style="font-weight: bold;">Format</p>
+<p class="code" style="margin-left: 40px;">void NomVariable.write(boolean value);</p>
+<p class="code" style="margin-left: 40px;">void NomVariable.write(int value);</p>
+<p class="code" style="margin-left: 40px;">void NomVariable.write(float value);</p>
+<p class="code" style="margin-left: 40px;">void NomVariable.write(String value);</p>
+<p class="code" style="margin-left: 40px;">void NomVariableBloc.write(boolean value, int index);</p>
+<p class="code" style="margin-left: 40px;">void NomVariableBloc.write(int value, int index);</p>
+<p class="code" style="margin-left: 40px;">void NomVariableBloc.write(float value, int index);</p>
+<p class="code" style="margin-left: 40px;">void NomVariableBloc.write(int[] valueArray);</p>
+<p class="code" style="margin-left: 40px;">void NomVariableBloc.write(float[] valueArray);</p>
+<p style="font-weight: bold; margin-top: 6pt;">Paramètre</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col style="width: 90%;">
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Paramètre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">boolean value</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Spécifie la valeur booléenne (vrai/faux) à écrire dans la variable.</p>
+<p class="Tabletext">La valeur booléenne peut être une variable booléenne locale ou une expression vraie ou fausse.</p>
+</td>
+</tr>
+</table>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col style="width: 90%;">
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Paramètre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">int value</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="Tabletext">Spécifie la valeur de type entier à écrire dans la variable.</p>
+<p class="Tabletext">La valeur peut être une variable de type entier locale, une valeur de variable Vijeo-Designer (obtenue à l'aide de <span style="font-family: 'Courier New', monospace; font-size: 9pt;">getIntValue();</span> ) ou une expression retournant un entier.</p>
+</td>
+</tr>
+</table>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col style="width: 90%;">
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Paramètre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">float value</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Spécifie la valeur à virgule flottante à écrire dans la variable.</p>
+<p class="Tabletext">Cette valeur peut être une variable de type flottant locale, une valeur de variable REAL de Vijeo-Designer (récupérée à l'aide de <span style="font-family: 'Courier New', monospace; font-size: 9pt;">getFloatValue();</span> ) ou une expression retournant un flottant.</p>
+</td>
+</tr>
+</table>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col style="width: 90%;">
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Paramètre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">String value</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Spécifie la valeur de type chaîne à écrire dans la variable.</p>
+<p class="Tabletext">Cette valeur peut être une variable de type chaîne locale, une valeur de variable Vijeo-Designer (obtenue à l'aide de <span style="font-family: 'Courier New', monospace; font-size: 9pt;">getStringValue();</span> ) ou une expression retournant une chaîne, comme un caractère ou un tableau de caractères.</p>
+<p class="NoteImage"><img src="Note_Moji.bmp" style="border: none;" alt="" width="51" height="25" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Assurez-vous que le nombre de caractères dans le paramètre de chaîne ne dépasse pas la capacité de la variable. Seuls les caractères pouvant entrer dans la variable sont stockés, et les caractères excédentaires sont supprimés.</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">Utilisez des guillemets pour identifier les chaînes de texte.<br>
+Par exemple : StringVar.write("Celle-ci est une chaîne de texte");</p>
+</li>
+<li class="p-NoteText">
+<p class="NoteText">Lorsque vous utilisez des guillemets ou des barres obliques inverses, vous devez ajouter une barre oblique inverse [ \ ] dans la chaîne de texte.<br>
+Par exemple, pour écrire la chaîne <span style="font-weight: bold;">"See Spot run" said Jane</span>, le script est : StringVar.write("\"See Spot run\"said Jane");<br>
+Pour écrire la chaîne <span style="font-weight: bold;">\\MyComputer</span>, le script est : StringVar.write("\\\\MyComputer");</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col style="width: 90%;">
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Paramètre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">boolean value</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Spécifie la valeur booléenne (vrai/faux) à écrire vers l'élément dans une variable de bloc.</p>
+<p class="Tabletext">La valeur booléenne peut être une variable booléenne locale ou une expression vraie ou fausse.</p>
+<p class="Image"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Ecrire les variables de bloc ne met pas à jour les valeurs dans l'équipement. Utilisez sendData( ) pour écrire des valeurs à partir de la machine cible vers l'équipement.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">int index</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Pour les variables de bloc, spécifiez la position d'index de l'élément vers lequel vous écrivez. Les numéros d'élément débutent à 0.</p>
+</td>
+</tr>
+</table>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col style="width: 90%;">
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Paramètre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">int value</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Spécifie la valeur du type entier à écrire vers l'élément dans une variable de bloc.</p>
+<p class="Tabletext">La valeur peut être une variable de type entier locale, une valeur de variable Vijeo-Designer (obtenue à l'aide de <span style="font-family: 'Courier New', monospace; font-size: 9pt;">getIntValue();</span> ) ou une expression retournant un entier.</p>
+<p class="Image"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Ecrire les variables de bloc ne met pas à jour les valeurs dans l'équipement. Utilisez sendData( ) pour écrire des valeurs à partir de la machine cible vers l'équipement.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">int index</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Pour les variables de bloc, spécifiez la position d'index de l'élément vers lequel vous écrivez. Les numéros d'élément débutent à 0.</p>
+</td>
+</tr>
+</table>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col style="width: 90%;">
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Paramètre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">float value</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Spécifie la valeur de point flottant à écrire vers l'élément dans une variable de bloc.</p>
+<p class="Tabletext">Cette valeur peut être une variable de type flottant locale, une valeur de variable Vijeo-Designer (obtenue à l'aide de <span style="font-family: 'Courier New', monospace; font-size: 9pt;">getFloatValue();</span> ) ou une expression retournant un flottant.</p>
+<p class="Image"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Ecrire les variables de bloc ne met pas à jour les valeurs dans l'équipement. Utilisez sendData( ) pour écrire des valeurs à partir de la machine cible vers l'équipement.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">int index</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Pour les variables de bloc, spécifiez la position d'index de l'élément vers lequel vous écrivez. Les numéros d'élément débutent à 0.</p>
+</td>
+</tr>
+</table>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col style="width: 90%;">
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Paramètre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">int[] valueArray</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Spécifie le tableau du type entier à écrire vers la variable.</p>
+<p class="Tabletext">Le tableau du type entier peut être le même tableau du type entier récupéré à l'aide de <a href="Variable_BlockgetIntValues.htm">getIntValues</a>.</p>
+<p class="Image"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Ecrire les variables de bloc ne met pas à jour les valeurs dans l'équipement. Utilisez sendData( ) pour écrire des valeurs à partir de la machine cible vers l'équipement.</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; margin-bottom: 14px; margin-left: 40px;" cellspacing="0" width="600">
+<col width="150">
+<col style="width: 90%;">
+<tr>
+<td style="border-top: Solid 3px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9" width="150">
+<p class="Tabletitle"><span style="font-weight: bold;">Paramètre</span></p>
+</td>
+<td style="border-top: Solid 3px #000000; border-bottom: Solid 1px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#91AFD9">
+<p class="Tabletitle"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 3px #000000; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" bgcolor="#CBD9ED" width="150">
+<p class="TableDefinitions">float[] valueArray</p>
+</td>
+<td style="border-bottom: Solid 3px #000000; width: 90%; vertical-align: TOP; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<p class="Tabletext">Spécifie la valeur flottante à écrire vers la variable.</p>
+<p class="Tabletext">Le tableau flottant peut être le même tableau flottant récupéré à l'aide de <a href="Variable_BlockgetFloatValues.htm">getFloatValues</a>.</p>
+<p class="Image"><img src="Limit.bmp" style="border: none;" alt="" width="77" height="24" border="0"></p>
+<ul>
+<li class="p-NoteText">
+<p class="NoteText">Ecrire les variables de bloc ne met pas à jour les valeurs dans l'équipement. Utilisez sendData( ) pour écrire des valeurs à partir de la machine cible vers l'équipement.</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<p style="font-weight: bold;">Valeur retournée</p>
+<p>Aucun</p>
+<p style="font-weight: bold;">Voir également</p>
+
+<p><a href="VariableGetIntValue.htm">getIntValue</a>, <a href="VariableGetFloatValue.htm">getFloatValue</a>, <a href="VariablegetStringValue.htm">getStringValue</a>, <a href="Variable_BlockgetIntValues.htm">getIntValues</a>, <a href="Variable_BlockgetFloatValues.htm">getFloatValues</a></p>
+
+</body>
+</html>
